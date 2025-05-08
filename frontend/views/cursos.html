@@ -1,38 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos Preparatórios</title>
-    <link rel="stylesheet" href="/front-end/css/style.css">
+    <title>Enemzada - Seu Portal de Estudos para o ENEM</title>
+    <link rel="stylesheet" href="../css/cursos.css">
 </head>
 
 <body>
-    <header>
-        <h1>Cursos Preparatórios para o ENEM</h1>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>ENEMzada</h1>
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="../images/foto-user.jpg">
+            </div>
+
+            <p class="username">Username</p>
+            <div class="progress-label">
+                <p> Seu progresso</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
         <nav>
-            <a href="../views/index.html">Início</a>
-            <a href="../views/youtube.html">YouTube</a>
-            <a href="../views/content-conteudo.html">Conteúdos Recomendados</a>
-            <a href="../views/simulados.html">Simulados Recomendados</a>
-            <a href="../views/noticias.html">Notícias ENEM</a>
-            <a href="../views/cursos.html">Cursos ENEM</a>
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-house space-icon"> </i>
+                    Início
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-user space-icon"> </i>
+                    Minha Conta
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-graduation-cap space-icon"></i>
+                    Central de Certificados
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-gear space-icon"></i>
+                    Administrador
+                </li>
+                <hr>
+            </ul>
         </nav>
-    </header>
 
-    <section id="cursos">
-        <h2>Cursos Preparatórios para o ENEM</h2>
-        <ul>
-            <li><a href="https://www.alura.com.br/cursos-online" target="_blank">Alura: Cursos preparatórios para o ENEM</a></li>
-            <li><a href="https://www.cursinhosenem.com.br" target="_blank">Cursinho ENEM: Plataforma online</a></li>
-            <li><a href="https://www.estudegratis.com.br/cursos" target="_blank">Estude Grátis: Cursos de Preparação ENEM</a></li>
-        </ul>
-    </section>
+        <div class=""></div>
+    </div>
 
-    <footer>
-        <p>Plataforma ENEM - 2025</p>
-    </footer>
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <header>
+            <input type="text" placeholder="Pesquisar matérias e aulas...">
+            <div style="display: flex;align-items: center;justify-content: space-between;width: 10%;margin-right: 50px;">
+                <i class="fa-solid fa-universal-access"></i>
+                <div class="linha"></div>
+                <i class="fa-solid fa-bell"></i>
+                <div class="linha"></div>
+
+                <div class="user-icon">
+                    <i class="fa-solid fa-circle-user fa-lg"></i> User<i class="fa-solid fa-angle-down fa-xs seta"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <div class="contenter-materias">
+                <h1>ENEMzada</h1>
+                <div class="botao">
+                    <i class="fa-solid fa-circle-chevron-left fa-xl"></i>
+                    <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                    <div class="image-container">
+
+                        <img src="" href="materia1.html" class="image-link">
+                        <img src="" href="materia2.html" class="image-link">
+                        <img src="" href="materia3.html" class="image-link">
+                        <img src="../images/historia.png" href="materia5.html" class="image-link">
+                        <img src="" href="materia6.html" class="image-link">
+                        <img src="" href="materia7.html" class="image-link">
+                        <img src="" href="materia8.html" class="image-link">
+                        <img src="" href="materia9.html" class="image-link">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
+    <script src="../js/cursos.js"></script>
 </body>
 
 </html>
