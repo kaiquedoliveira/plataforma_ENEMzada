@@ -141,3 +141,8 @@ main.content {
   height: 409px;
   border-radius: 0px; 
 }
+
+.barra .active {
+    color: #590083;
+    font-weight: bold;
+}
