@@ -1,112 +1,163 @@
-/* Reseta alguns estilos básicos */
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- 
-/* Estilo global da página */
+
+/* Estilo global */
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
 }
- 
-/* Layout do wrapper com sidebar e conteúdo principal */
-.wrapper {
+
+/* Layout principal */
+.wrapper, .container {
   display: flex;
+  align-items: flex-start;
   min-height: 100vh;
 }
+
+/* Sidebar */
+
+.sidebar {
+    width: 332px;
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 0;
+    margin-right: 40px; /* Espaço entre sidebar e main-content */
+}
+.sidebar h1 {
+    text-align: center;
+    font-size: 160%;
+    margin-bottom: 70px;
+}
+
+.sidebar nav {
+    margin-top: 100px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 10px;
+
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
  
+/* Navegação da Sidebar */
 nav ul {
     list-style: none;
-    padding: 0;
+    margin: 10px;
 }
  
 nav ul li {
-    padding: 10px;
+    margin: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+.barra {
+    margin-top: auto;
+    font-size: smaller;
 }
  
-nav ul li a {
-    text-decoration: none;
-    color: black;
+.barra li {
+    color: #737373;
+    font-weight: lighter;
 }
- 
- 
-/* Sidebar lateral com menu de configurações */
-.sidebar {
-  width: 290px;
-  background-color: #eaeaea;
-  padding: 20px;
-}
- 
-/* Resumo do perfil na sidebar */
+
 .profile-summary {
   text-align: center;
   margin-bottom: 30px;
-  margin-top: 40px; /* Adiciona espaço acima do bloco do perfil */
 }
- 
+
 .profile-pic {
-  width: 80px;
-  height: 80px;
-  background-color: #333;
-  color: #fff;
+  width: 110px;
+  height: 110px;
+  background-color: #555;
   border-radius: 50%;
-  font-size: 36px;
-  line-height: 80px;
-  margin: 30px auto 10px auto; /* Aumenta o espaço acima da imagem */
+  margin: 0 auto 10px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
- 
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 90%;
+  margin-bottom: 10px;
+}
+
 /* Menu de configurações */
 .settings-menu ul {
   list-style: none;
   padding: 0;
-  margin-top: 45px; /* Espaço acima da ul */
-  margin-bottom: 0; /* Ajuste se quiser espaço abaixo também */
+  margin: 0;
 }
- 
+
 .settings-menu ul li {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
- 
+
 .settings-menu ul li a {
-text-decoration: none;
-  color: #333;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 6px;
   display: block;
-  padding: 10px 10px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
 }
- 
-.settings-menu ul li:hover a,
-.settings-menu ul li.active a {
-  background-color: #5e2a84;
+
+.settings-menu ul li.active a,
+.settings-menu ul li a:hover {
+  background: #5e2a84;
   color: #fff;
 }
- 
- 
+
 /* Conteúdo principal */
 .main-content {
-  flex-grow: 1;
-  padding: 40px;
-  margin: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    padding: 40px;
+    margin: 0; /* Remove margem lateral, pois o espaçamento já está na sidebar */
+    background-color: #242424;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 0;
 }
- 
+
 .main-content h1 {
   margin-bottom: 10px;
   font-size: 28px;
-  color: black;
+  color: #fff;
 }
- 
+
 .main-content p {
   margin-bottom: 20px;
   font-size: 16px;
+  color: #ccc;
 }
- 
+
 /* Área de visualização da imagem */
 .image-preview {
   width: 300px;
@@ -117,21 +168,21 @@ text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #1b1b1b;
 }
- 
+
 .image-preview img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
- 
+
 /* Botão de upload */
 .upload-container {
   margin-bottom: 20px;
 }
- 
+
 .upload-button {
   background-color: #5e2a84;
   color: #fff;
@@ -142,16 +193,17 @@ text-decoration: none;
   font-size: 14px;
   display: inline-block;
   transition: background-color 0.2s;
+  
 }
- 
+
 .upload-button:hover {
-  background-color: #5e2a84;
+  background-color: #7c3fc6;
 }
- 
+
 .upload-container input[type="file"] {
   display: none;
 }
- 
+
 /* Botão de salvar */
 .save-button {
   background-color: #5e2a84;
@@ -162,9 +214,26 @@ text-decoration: none;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-top: 20px;
 }
- 
+
 .save-button:hover {
-  background-color: #5e2a84;
+  background-color: #7c3fc6;
 }
- 
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .wrapper, .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sidebar {
+    margin: 24px auto 0 auto;
+    width: 95%;
+  }
+  .main-content {
+    margin: 24px auto;
+    width: 95%;
+    padding: 24px;
+  }
+}

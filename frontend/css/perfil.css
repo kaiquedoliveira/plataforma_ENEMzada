@@ -1,56 +1,110 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.barra .active {
+    color: #590083;
+    font-weight: bold;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: black;
+    color: white;
 }
  
 .container {
     display: flex;
+    align-items: flex-start;
 }
  
 .sidebar {
-    width: 250px;
-    background-color: #eaeaea;
+  width: 332px;
+    background-color: #1b1b1b;
+    color: #fff;
     padding: 20px;
-    min-height: 100vh;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 0;
+    margin-right: 40px; /* Espaço entre sidebar e main-content */
 }
  
-.profile-summary {
+.sidebar h1 {
     text-align: center;
-    margin-bottom: 40px; /* Aumenta o espaço abaixo do bloco do perfil */
-    margin-top: 40px;    /* Adiciona espaço acima do bloco do perfil */
+    font-size: 160%;
+    margin-bottom: 70px;
+}
+
+.sidebar nav {
+    margin-top: 100px;
 }
  
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 36px;
-  line-height: 80px;
-  margin: 0 auto 10px auto;
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
 }
  
+.profile-pic img {
+    width: 110px;
+    height: 110px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+ 
+.username {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 10px;
+}
+ 
+
+.sidebar nav {
+    margin-top: 100px;
+}
+ 
+/* Navegação da Sidebar */
 nav ul {
     list-style: none;
-    padding: 0;
+    margin: 10px;
 }
  
 nav ul li {
-    padding: 10px;
+    margin: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+.user-icon {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
 }
  
-nav ul li a {
-    text-decoration: none;
-    color: black;
+
+.barra {
+    margin-top: auto;
+    font-size: smaller;
+}
+ 
+.barra li {
+    color: #737373;
+    font-weight: lighter;
 }
  
 .content {
     flex-grow: 1;
     padding: 40px;
-    background-color: white;
+    background-color: #242424;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 10px;
@@ -93,5 +147,7 @@ input, textarea {
   background-color: #5e2a84;
   color: #fff;
 }
+
+
  
  
