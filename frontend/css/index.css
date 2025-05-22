@@ -112,6 +112,17 @@ h1, h2, h3, h4 {
   margin-top: 60px;
 }
 
+<<<<<<< HEAD
+.image-right img {
+  max-width: 100%; /* Tamanho máximo da imagem */
+  height: 409px;
+  border-radius: 0px; 
+}
+
+.barra .active {
+    color: #590083;
+    font-weight: bold;
+=======
 .hero-section {
   display: flex;
   align-items: center;
@@ -271,4 +282,5 @@ h1, h2, h3, h4 {
   .hero-subtitle {
     font-size: 1.1rem;
   }
+>>>>>>> 42a3bc1a3ed951a8709c96de8c77b1e5f084c4d0
 }

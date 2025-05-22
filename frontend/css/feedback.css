@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.barra .active {
+    color: #590083;
+
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f0f0f0;
@@ -89,11 +94,6 @@ nav ul li a {
     align-items: center;
 }
 
-.active {
-    color: #590083;
-
-}
-
 hr {
     opacity: 0.4;
     width: 300px;
@@ -121,92 +121,6 @@ header {
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
-}
-
-/* Conteúdo Principal */
-.content {
-    text-align: center;
-}
-
-.contenter-materias {
-    width: 97%;
-    padding: 20px;
-    background-color: #1b1b1b;
-    border-radius: 10px;
-    margin: 22px;
-    min-height: 88.9vh;
-    box-sizing: border-box;
-    margin-bottom: 0;
-}
-
-.content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-/* Estilização do Flip Card */
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 600px;
-    perspective: 1000px;
-    border-radius: 10px;
-}
-
-.flip-card-inner {
-    position: relative;
-    height: 600px;
-    transform-style: preserve-3d;
-    transition: transform 1.5s;
-    width: 260px;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.flip-card-front {
-    display: flex;
-}
-
-.image-link {
-    width: 100%;
-    height: 100%;
-    background-color: #590083;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-}
-
-.flip-card-back {
-    background-color: #323232;
-    color: #fff;
-    transform: rotateY(180deg);
-    flex-direction: column;
-    text-align: center;
-
-}
-
-/* Ajuste para melhor navegação das imagens */
-.image-container {
-    display: flex;
-    overflow: overlay;
-    gap: 50px;
-    padding: 20px;
-    scrollbar-width: none;
 }
 
 .space-icon {
@@ -295,8 +209,137 @@ header {
     fill: #b4b4b4;
 }
 
-.title {
-    font-weight: bolder;
-    font-size: 24px;
+/* Feedback */
+.feedback-container {
+  max-width: 1800px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 822px;
 }
 
+.feedback-container h2 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.feedback-container p {
+  color: #ddd;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s;
+  background-color: #fff;
+}
+
+.form-group select:focus,
+.form-group textarea:focus,
+.form-group input[type="email"]:focus {
+  border-color: #590083;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 225px;
+  color: #ccc;
+}
+
+.rating-group {
+  margin-bottom: 25px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-right: 5px;
+}
+
+.stars input:checked ~ label,
+.stars input:hover ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #f1c40f;
+}
+
+.submit-btn {
+  background-color: #590083;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+  margin-top: 30px;
+}
+
+.submit-btn:hover {
+  background-color: #7a00b3;
+}
+
+.thank-you-message {
+  text-align: center;
+  padding: 30px;
+  position: fixed;
+  top: 44%;
+  left: 38%;
+}
+
+.thank-you-message i {
+  font-size: 60px;
+  color: #2ecc71;
+  margin-bottom: 20px;
+
+}
+
+.thank-you-message h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.thank-you-message p {
+  color: #ddd;
+  margin-bottom: 0;
+}
