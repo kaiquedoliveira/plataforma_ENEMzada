@@ -199,13 +199,6 @@ body::before {
   margin-top: 1rem;
 }
 
-
-.form-button:hover {
-  background: #6a30e0;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(138, 79, 255, 0.4);
-
-
 .form-footer {
   margin-top: 2rem;
   text-align: center;
@@ -409,5 +402,4 @@ body::before {
   .image-title {
     font-size: 1.5rem;
   }
-}
 }
