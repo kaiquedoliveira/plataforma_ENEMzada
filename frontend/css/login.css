@@ -8,7 +8,7 @@
   --dark: #1b0133;
   --light: #fcffff;
   --gray: #c9cdcf;
-  --overlay: rgba(44, 62, 80, 0.85);
+  --overlay: rgba(255, 255, 255, 0);
   --transition: all 0.3s ease-out;
 }
 
@@ -318,14 +318,13 @@ body::before {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  mix-blend-mode: multiply;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
