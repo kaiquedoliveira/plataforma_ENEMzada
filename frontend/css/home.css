@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Variáveis de cor */
 :root {
   --primary: #8a4fff;
@@ -228,3 +229,235 @@ body {
   }
 }
 
+=======
+/* Variáveis para cores */
+:root {
+    --color-bg: #121014;
+    --color-primary: #6b3fa0;
+    --color-primary-light: #8c5edb;
+    --color-text-light: #e0d9f2;
+    --color-text-muted: #999;
+    --color-shadow: rgba(107, 63, 160, 0.4);
+  }
+  
+  /* Reset básico */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  
+  body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-light);
+  }
+  
+  /* Layout Grid principal */
+  .app {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main";
+    height: 100vh;
+  }
+  
+
+  /* Sidebar escondida (fora da tela) */
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  /* Main com margem para sidebar */
+  main {
+    margin-left: 260px;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+  }
+  
+  /* Main quando sidebar escondida */
+  .sidebar.hidden + main {
+    margin-left: 0;
+  }
+  
+  /* Botão toggle */
+  #btn-toggle {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #25274d;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  #btn-toggle:hover {
+    background-color: #dcdde1;
+  }
+  
+  
+  /* Header */
+  header {
+    background-color: #1c1435;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0;
+    height: 60px;
+    z-index: 10;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: var(--color-primary);
+    user-select: none;
+  }
+  
+  /* Botão hamburguer */
+  .btn-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+  }
+  
+  /* Ícone user */
+  .user-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-primary);
+    border: 2px solid var(--color-primary-light);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .user-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-icon:hover {
+    box-shadow: 0 0 16px var(--color-primary-light);
+  }
+  
+  /* Main Content */
+  main {
+    grid-area: main;
+    margin-top: 60px;
+    margin-left: 60px;
+    padding: 2.5rem 3rem;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  main.collapsed {
+    margin-left: 0;
+  }
+  
+  /* Conteúdo - título e texto */
+  .content-header {
+    max-width: 720px;
+    margin-bottom: 3rem;
+  }
+  
+  .content-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .content-header p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+  
+  /* Cards exemplo */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: #221b33;
+    border-radius: 12px;
+    padding: 1.8rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(107, 63, 160, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px var(--color-primary);
+  }
+  
+  .card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--color-primary-light);
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .app {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr;
+      grid-template-areas:
+        "header"
+        "main";
+    }
+  
+    .sidebar {
+      position: fixed;
+      z-index: 1100;
+      top: 60px;
+      left: 0;
+      height: calc(100vh - 60px);
+      transform: translateX(-100%);
+      width: 240px;
+      box-shadow: 4px 0 12px var(--color-shadow);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  
+    header {
+      left: 0 !important;
+    }
+  
+    main {
+      margin-left: 0 !important;
+      padding: 1.5rem 1.5rem;
+    }
+  }
+  
+>>>>>>> 651e9d3 (oi)
