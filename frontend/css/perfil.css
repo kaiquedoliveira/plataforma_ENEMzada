@@ -1,97 +1,273 @@
-body {
-    font-family: Arial, sans-serif;
+/* Variáveis de cor */
+:root {
+    --primary: #8a4fff;
+    --primary-light: rgba(138, 79, 255, 0.1);
+    --dark: #1b1b1b;
+    --darker: #121212;
+    --light: #ffffff;
+    --gray: #c9cdcf;
+    --dark-gray: #373737;
+}
+
+/* Reset e estilos base */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
- 
-.container {
+
+body {
     display: flex;
+    height: 100vh;
+    background-color: var(--darker);
+    color: var(--light);
 }
- 
+
+/* Sidebar */
 .sidebar {
-    width: 250px;
-    background-color: #eaeaea;
+    width: 300px;
+    background-color: var(--dark);
     padding: 20px;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
- 
-.profile-summary {
+
+.sidebar h1 {
     text-align: center;
-    margin-bottom: 40px; /* Aumenta o espaço abaixo do bloco do perfil */
-    margin-top: 40px;    /* Adiciona espaço acima do bloco do perfil */
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--light);
 }
- 
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .profile-pic {
-  width: 80px;
-  height: 80px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 36px;
-  line-height: 80px;
-  margin: 0 auto 10px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid var(--primary);
 }
- 
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--dark-gray);
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.progress {
+    width: 65%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+.progress-label {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+/* Navegação */
 nav ul {
     list-style: none;
-    padding: 0;
 }
- 
-nav ul li {
-    padding: 10px;
+
+nav.main-nav ul li {
+    margin: 15px 0;
 }
- 
-nav ul li a {
+
+nav.main-nav ul li a {
+    color: var(--light);
     text-decoration: none;
-    color: black;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
 }
- 
-.content {
-    flex-grow: 1;
-    padding: 40px;
-    background-color: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    border-radius: 10px;
+
+nav.main-nav ul li a:hover, 
+nav.main-nav ul li a.active {
+    background-color: var(--primary);
 }
- 
+
+nav.main-nav ul li a i {
+    margin-right: 10px;
+}
+
+nav.secondary-nav {
+    margin-top: auto;
+}
+
+nav.secondary-nav ul li {
+    margin: 10px 0;
+}
+
+nav.secondary-nav ul li a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+nav.secondary-nav ul li a i {
+    margin-right: 8px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--dark-gray);
+    margin: 10px 0;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darker);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--dark);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 400px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--light);
+    flex: 1;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    gap: 20px;
+    color: var(--gray);
+}
+
+.user-actions i {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Profile Content */
+.profile-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.user-info h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.profile-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
 .profile-section {
+    background-color: var(--dark);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.profile-section h3 {
+    font-size: 1.2rem;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
- 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+.profile-section h3 i {
+    margin-right: 10px;
+    color: var(--primary);
 }
- 
-.settings-menu ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px; /* Espaço acima da ul */
-  margin-bottom: 0; /* Ajuste se quiser espaço abaixo também */
+
+.profile-links {
+    list-style: none;
 }
- 
-.settings-menu ul li {
-  margin-bottom: 10px;
+
+.profile-links li {
+    padding: 8px 0;
+    color: var(--gray);
 }
- 
-.settings-menu ul li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 10px 10px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+
+.profile-links li strong {
+    color: var(--light);
 }
- 
-.settings-menu ul li:hover a,
-.settings-menu ul li.active a {
-  background-color: #5e2a84;
-  color: #fff;
+
+.progress-container {
+    margin-top: 15px;
 }
- 
- 
+
+.progress-track {
+    height: 6px;
+    background-color: var(--dark-gray);
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 3px;
+}
+
+.progress-container span {
+    font-size: 0.8rem;
+    color: var(--gray);
+}

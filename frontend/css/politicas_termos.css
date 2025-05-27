@@ -4,6 +4,72 @@
     box-sizing: border-box;
 }
 
+.terms-content {
+    padding: 30px;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    margin: 20px;
+    color: #d9d9d9;
+    line-height: 1.6;
+}
+
+.terms-content h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 2px solid #590083;
+    padding-bottom: 15px;
+}
+
+.terms-content h2 {
+    color: #fff;
+    margin: 25px 0 15px 0;
+    font-size: 1.5em;
+    border-bottom: 1px solid #590083;
+    padding-bottom: 8px;
+}
+
+.terms-content h3 {
+    color: #fff;
+    margin: 20px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.terms-content p {
+    margin-bottom: 15px;
+}
+
+.terms-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.terms-content li {
+    margin-bottom: 8px;
+}
+
+.highlight {
+    color: #590083;
+    font-weight: bold;
+}
+
+.last-update {
+    text-align: right;
+    font-style: italic;
+    color: #737373;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #373737;
+}
+
+
+.barra .active {
+    color: #590083;
+
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background: #f0f0f0;
@@ -89,11 +155,6 @@ nav ul li a {
     align-items: center;
 }
 
-.active {
-    color: #590083;
-
-}
-
 hr {
     opacity: 0.4;
     width: 300px;
@@ -121,92 +182,6 @@ header {
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
-}
-
-/* Conteúdo Principal */
-.content {
-    text-align: center;
-}
-
-.contenter-materias {
-    width: 97%;
-    padding: 20px;
-    background-color: #1b1b1b;
-    border-radius: 10px;
-    margin: 22px;
-    min-height: 88.9vh;
-    box-sizing: border-box;
-    margin-bottom: 0;
-}
-
-.content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-/* Estilização do Flip Card */
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 600px;
-    perspective: 1000px;
-    border-radius: 10px;
-}
-
-.flip-card-inner {
-    position: relative;
-    height: 600px;
-    transform-style: preserve-3d;
-    transition: transform 1.5s;
-    width: 260px;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.flip-card-front {
-    display: flex;
-}
-
-.image-link {
-    width: 100%;
-    height: 100%;
-    background-color: #590083;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-}
-
-.flip-card-back {
-    background-color: #323232;
-    color: #fff;
-    transform: rotateY(180deg);
-    flex-direction: column;
-    text-align: center;
-
-}
-
-/* Ajuste para melhor navegação das imagens */
-.image-container {
-    display: flex;
-    overflow: overlay;
-    gap: 50px;
-    padding: 20px;
-    scrollbar-width: none;
 }
 
 .space-icon {
@@ -294,9 +269,3 @@ header {
     width: 1.3em;
     fill: #b4b4b4;
 }
-
-.title {
-    font-weight: bolder;
-    font-size: 24px;
-}
-

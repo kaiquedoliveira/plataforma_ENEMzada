@@ -3,50 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Perfil - ENEMzada</title>
     <link rel="stylesheet" href="../css/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-       <aside class="sidebar">
-  <div class="profile-summary">
-    <div class="profile-pic"></div>
-    <p>braga</p>
-  </div>
-  <nav class="settings-menu">
-    <ul>
-      <li><a href="home.html">início</a></li>
-      <li class="active"><a href="perfil.html">Perfil</a></li>
-      <li><a href="foto.html">Foto</a></li>
-      <li><a href="privacidade-segurança.html">Privacidade</a></li>
-    </ul>
-  </nav>
-</aside>
- 
-        <main class="content">
-            <h1>Perfil</h1>
-            <p>Adicione informações sobre você</p>
- 
-            <form>
-                <div class="profile-section">
-                    <label for="name">Dados básicos:</label>
-                    <input type="text" id="name" value="">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>ENEMzada</h1>
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="../images/foto-user.jpg" alt="Foto do usuário">
+            </div>
+            <p class="username">Username</p>
+            <div class="progress-label">
+                <p>Seu progresso</p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./home.html"><i class="fas fa-home"></i> Início</a></li>
+                <hr>
+                <li><a href="./perfil.html" class="active"><i class="fas fa-user"></i> Minha Conta</a></li>
+                <hr>
+                <li><a href="./certificados.html"><i class="fas fa-certificate"></i> Central de Certificados</a></li>
+                <hr>
+            </ul>
+        </nav>
+        <nav class="secondary-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-comment"></i> Feedback</a></li>
+                <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
+                <li><a href="#"><i class="fas fa-file-contract"></i> Termos de Uso</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar matérias e aulas...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-universal-access"></i>
+            </div>
+        </header>
+
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="user-info">
+                    <h2>Fulano de tal</h2>
+                    <p>Seu programa</p>
                 </div>
- 
-                <div class="profile-section">
-                    <label for="title">Profissão ou título:</label>
-                    <input type="text" id="title" value="">
-                    <small>Adicione um título profissional, como "Instrutor na Udemy" ou "Arquiteto".</small>
-                </div>
- 
-                <div class="profile-section">
-                    <label for="bio">Biografia:</label>
-                    <textarea id="bio"></textarea>
-                    <small>Não é permitido usar links e códigos de cupom nessa seção.</small>
-                </div>
-            </form>
-        </main>
+            </div>
+
+            <div class="profile-sections">
+                <section class="profile-section">
+                    <h3><i class="fas fa-home"></i> Início</h3>
+                    <ul class="profile-links">
+                        <li><strong>Fulano de tal</strong></li>
+                        <li>Control de Certificado</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h3><i class="fas fa-comment"></i> Feedback</h3>
+                    <p>Superior para obtener</p>
+                    <p>Termos de User / Políticas de Personalizar</p>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Projetos quantitativos em alta</h3>
+                    <div class="progress-container">
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <span>75% completo</span>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </body>
 </html>
- 
