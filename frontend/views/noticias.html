@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<<<<<<< HEAD
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notícias ENEM</title>
-  <link rel="stylesheet" href="../css/noticias.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - ENEMzada</title>
+    <link rel="stylesheet" href="../css/noticias.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">ENEMzada</div>
-      <div class="nav-links">
-        <a href="index.html" class="btn">Início</a>
-        <a href="simulados.html" class="btn">Simulados</a>
-        <a href="cursos.html" class="btn">Cursos</a>
-        <a href="noticias.html" class="btn">Notícias</a>
-      </div>
-    </nav>
-  </header>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">ENEMzada</div>
+            <div class="nav-links">
+                <a href="../views/index.html" class="nav-link effect-1">Início</a>
+                <a href="../views/login.html" class="nav-link effect-1">Login</a>
+                <a href="../views/cadastro.html" class="nav-link effect-1">Cadastro</a>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Seção de Notícias -->
-  <main>
-    <section class="noticias-container">
-      <h1>Últimas Notícias sobre o ENEM</h1>
-      <p>Mantenha-se informado com as novidades mais recentes sobre o ENEM.</p>
-      <div class="noticia">
-        <h2>ENEM 2025: O que você precisa saber</h2>
-        <p>Guia de preparação para o Enem: tudo o que você precisa saber</p>
-        <a href="https://www.cnnbrasil.com.br/educacao/guia-de-preparacao-para-o-enem-tudo-o-que-voce-precisa-saber/" target="_blank" class="btn-leia-mais">Leia mais</a>
-      </div>
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Notícias do ENEM</h1>
+                <p class="hero-subtitle">Fique por dentro das últimas atualizações e informações sobre o Exame Nacional do Ensino Médio.</p>
+            </div>
+        </section>
 
-      <div class="noticia">
-        <h2>Mudanças no ENEM: O que muda para os alunos?</h2>
-        <p>Descubra Como Será o Novo Enem</p>
-        <a href="https://neteducacao.com.br/mudancas-no-enem-2025/#google_vignette" target="_blank" class="btn-leia-mais">Leia mais</a>
-      </div>
+        <section class="news-section">
+            <div class="section-intro">
+                <h2 class="section-title">Últimas Notícias</h2>
+                <p class="section-description">Acompanhe as novidades e informações relevantes sobre o ENEM.</p>
+            </div>
 
-      <div class="noticia">
-        <h2>Oportunidade de mudanças no ENEM</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <a href="https://www.estadao.com.br/educacao/novo-enem" target="_blank" class="btn-leia-mais">Leia mais</a>
-      </div>
-    </section>
-  </main>
+            <div class="news-grid">
+                <article class="news-card">
+                    <h3 class="news-title">Data do ENEM 2025 é divulgada</h3>
+                    <p class="news-description">O Ministério da Educação anunciou que o ENEM 2025 será realizado nos dias 7 e 14 de novembro.</p>
+                    <a href="https://www.gov.br/mec/pt-br/assuntos/noticias/2025/maio/publicado-edital-do-enem-2025" class="btn">Leia mais</a>
+                </article>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>Plataforma ENEMzada - © 2025. Todos os direitos reservados.</p>
-  </footer>
+                <article class="news-card">
+                    <h3 class="news-title">Mudanças no formato do ENEM</h3>
+                    <p class="news-description">Novas diretrizes foram apresentadas para o formato do exame, visando melhorar a experiência dos candidatos.</p>
+                    <a href="https://www.cnnbrasil.com.br/educacao/enem-2025-entenda-as-3-principais-mudancas-divulgadas-em-edital/" class="btn">Leia mais</a>
+                </article>
+
+                <article class="news-card">
+                    <h3 class="news-title">Inscrições para o ENEM 2025</h3>
+                    <p class="news-description">As inscrições para o ENEM 2025 começam em abril e vão até maio. Fique atento às datas!</p>
+                    <a href="https://www.gov.br/inep/pt-br/assuntos/noticias/enem/inscricoes-do-enem-2025-abertas" class="btn">Leia mais</a>
+                </article>
+
+                <article class="news-card">
+                    <h3 class="news-title">Dicas para se preparar para o ENEM</h3>
+                    <p class="news-description">Confira as melhores dicas de especialistas para se preparar para o exame e garantir uma boa pontuação.</p>
+                    <a href="https://www.ifsc.edu.br/postagens-blog-intercambistas/-/asset_publisher/qYC5Mt2Bw6wv/content/id/1768098/10-dicas-para-se-preparar-para-o-enem" class="btn">Leia mais</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">© 2023 ENEMzada - Todos os direitos reservados</p>
+    </footer>
 </body>
-
-</html>

@@ -2,64 +2,60 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ENEMzada - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/home.css" />
 </head>
 <body>
-  <header>
-    <button id="btn-toggle" aria-label="Toggle Sidebar">&#9776;</button>
-    <div class="logo">ENEMZADA</div>
-    <div class="user-icon">
-      <img src="https://i.pravatar.cc/40" alt="Foto do usuário" />    </div>
+
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">ENEMzada</div>
+      <div class="nav-links">
+        <a href="../views/index.html" class="nav-link effect-1">Início</a>
+        <a href="../views/login.html" class="nav-link effect-1">Login</a>
+        <a href="../views/quemsomos.html" class="nav-link effect-1">Quem Somos</a>
+      </div>
+    </nav>
   </header>
-  
-  <main>
-    <section class="content-header">
-      <h1>ENEM 2025!!</h1>
-      <p>
-        Explore os conteúdos, simulados GRATUITOS, cursos recomendados por especialistas e muito mais para projetar seu futuro com o ENEM!
-      </p>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">ENEM 2025!!</h1>
+        <p class="hero-subtitle">
+          Explore os conteúdos, simulados GRATUITOS, cursos recomendados por especialistas e muito mais para projetar seu futuro com o ENEM!
+        </p>
+      </div>
     </section>
 
-    <section class="cards">
-      <article class="card">
-        <h3>Matérias</h3>
-        <p>Conteúdos completos para todas as matérias do ENEM.</p>
-        <a href=""></a>
-      </article>
-      <article class="card">
-        <h3>Simulados</h3>
-        <p>Simulados práticos para testar seus conhecimentos.</p>
-        
-        
-      </article>
-      <article class="card">
-        <h3>Cursos</h3>
-        <p>Cursos recomendados para melhorar seu desempenho.</p>
-      </article>
-      <article class="card">
-        <h3>Notícias</h3>
-        <p>Fique atualizado com as últimas notícias do ENEM.</p>
-      </article>
+    <section class="cards-section">
+      <div class="section-intro">
+        <h2 class="section-title">Nossos Recursos</h2>
+        <p class="section-description">Descubra as melhores ferramentas para sua preparação.</p>
+      </div>
+
+      <div class="cards-grid">
+        <a href="../views/cursos.html" class="card" aria-label="Matérias ENEM">
+          <h3 class="card-title">Matérias</h3>
+          <p class="card-description">Conteúdos completos para todas as matérias do ENEM.</p>
+        </a>
+        <a href="../views/simulados.html" class="card" aria-label="Simulados ENEM">
+          <h3 class="card-title">Simulados</h3>
+          <p class="card-description">Simulados práticos para testar seus conhecimentos.</p>
+        </a>
+        <a href="../views/noticias.html" class="card" aria-label="Notícias ENEM">
+          <h3 class="card-title">Notícias</h3>
+          <p class="card-description">Fique atualizado com as últimas notícias do ENEM.</p>
+        </a>
+      </div>
     </section>
   </main>
-</div>
 
-<script>
- const btnToggle = document.getElementById('btn-toggle');
- const sidebar = document.getElementById('sidebar');
-  const header = document.querySelector('header');
-  const main = document.querySelector('main');
-
-  btnToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    header.classList.toggle('collapsed');
-    main.classList.toggle('collapsed');
-  });
-</script>
-
+  <footer class="footer">
+    <p class="footer-text">© 2023 ENEMzada - Todos os direitos reservados</p>
+  </footer>
 </body>
-</html>       
-  
+</html>
