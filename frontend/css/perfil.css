@@ -24,111 +24,90 @@ body {
     color: var(--light);
 }
 
+.barra .active {
+  color: #590083;
+  font-weight: bold;
+}
+
 /* Sidebar */
 .sidebar {
-  width: 300px; /* Ajusta a largura para ser igual à do suporte */
-  background-color: var(--dark); /* Usa a mesma cor de fundo */
-  color: var(--light); /* Usa a mesma cor de texto */
-  padding: 15px; /* Ajusta o espaçamento interno */
+  width: 350px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--dark-gray); /* Adiciona uma borda à direita */
 }
 
 .sidebar h1 {
   text-align: center;
-  font-size: 1.5rem; /* Ajusta o tamanho da fonte */
-  margin-bottom: 40px; /* Reduz o espaçamento inferior */
-  color: var(--primary); /* Usa a cor primária */
+  font-size: 160%;
+  margin-bottom: 70px;
 }
 
 .profile {
   text-align: center;
-  margin-bottom: 20px; /* Reduz o espaçamento inferior */
+  margin-bottom: 30px;
 }
 
 .profile-pic img {
-  width: 100px; /* Ajusta o tamanho da imagem */
-  height: 100px;
-  background-color: var(--dark-gray); /* Usa a mesma cor de fundo */
+  width: 110px;
+  height: 110px;
+  background-color: #555;
   border-radius: 50%;
   margin: 0 auto 10px auto;
 }
 
 .username {
   font-weight: bold;
-  font-size: 1rem; /* Ajusta o tamanho da fonte */
-  margin-bottom: 5px; /* Reduz o espaçamento inferior */
+  font-size: 90%;
+  margin-bottom: 10px;
 }
 
 .progress-bar {
   width: 100%;
-  height: 6px; /* Ajusta a altura da barra de progresso */
-  background-color: var(--dark-gray);
-  border-radius: 3px;
+  height: 8px;
+  background-color: #373737;
+  border-radius: 5px;
   overflow: hidden;
   margin: 10px 0;
+  margin-bottom: 30px;
 }
 
 .progress {
-  width: 70%; /* Ajusta o progresso */
+  width: 75%;
   height: 100%;
-  background-color: var(--primary);
+  background-color: #590083;
 }
 
 .progress-label {
-  font-size: 0.85rem; /* Ajusta o tamanho da fonte */
-  color: var(--gray);
-  text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
+  font-size: 85%;
+  color: #d9d9d9;
+  display: flex;
 }
 
-/* Navegação */
+/* Navegação da Sidebar */
 nav ul {
-    list-style: none;
+  list-style: none;
+  margin: 10px;
 }
 
-nav.main-nav ul li {
-    margin: 15px 0;
+nav ul li {
+  margin: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #d9d9d9;
 }
 
-nav.main-nav ul li a {
-    color: var(--light);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 8px 10px;
-    border-radius: 4px;
-    transition: all 0.3s;
+.barra {
+  margin-top: auto;
+  font-size: smaller;
 }
 
-nav.main-nav ul li a:hover, 
-nav.main-nav ul li a.active {
-    background-color: var(--primary);
-}
-
-nav.main-nav ul li a i {
-    margin-right: 10px;
-}
-
-nav.secondary-nav {
-    margin-top: auto;
-}
-
-nav.secondary-nav ul li {
-    margin: 10px 0;
-}
-
-nav.secondary-nav ul li a {
-    color: var(--gray);
-    text-decoration: none;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-}
-
-nav.secondary-nav ul li a i {
-    margin-right: 8px;
+.barra li {
+  color: #737373;
+  font-weight: lighter;
 }
 
 hr {
