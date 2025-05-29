@@ -1,4 +1,4 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -24,18 +24,21 @@
     </div>
     <nav>
       <ul>
-        <li> <a href="cursos.html"> <i class="fa-solid fa-house space-icon"></i>Início</a></li>
+        <li> <a href="home.html"> <i class="fa-solid fa-house space-icon"></i>Início</a></li>
         <hr />
         <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i>Meu Perfil</a></li>
         <hr />
         <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i>Central de Certificados</a></li>
+        <hr />
+        <li><a href="feedback.html"> <i class="fa-solid fa-comment-dots space-icon"></i>Feedback</a></li>
+        <hr />
+        <li><a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i>Cursos</a></li>
         <hr />
       </ul>
     </nav>
       <div class="barra">
       <nav>
         <ul>
-          <li class="active"><a href="feedback.html">Feedback</a></li>
           <li><a href="suporte.html">Suporte para Alunos</a></li>
           <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
         </ul>
@@ -71,7 +74,7 @@
             <div class="form-group">
               <label for="feedbackType">Tipo de Feedback:</label>
               <select id="feedbackType" name="feedbackType" required>
-                <option value="">Selecione uma opção</option>
+                <option value="" disabled selected hidden>Selecione uma opção</option>
                 <option value="sugestao">Sugestão</option>
                 <option value="elogio">Elogio</option>
                 <option value="problema">Relato de Problema</option>

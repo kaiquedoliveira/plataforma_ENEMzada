@@ -1,0 +1,321 @@
+/* Variáveis de cor */
+:root {
+    --primary: #8a4fff;
+    --primary-light: rgba(138, 79, 255, 0.1);
+    --dark: #1b1b1b;
+    --darker: #121212;
+    --light: #ffffff;
+    --gray: #c9cdcf;
+    --dark-gray: #373737;
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--darker);
+    color: var(--light);
+}
+
+.barra .active {
+    color: #590083;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 350px;
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1 {
+    text-align: center;
+    font-size: 160%;
+    margin-bottom: 70px;
+    margin-top: 1px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic img {
+    width: 110px;
+    height: 110px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #373737;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+
+.progress {
+    width: 75%;
+    height: 100%;
+    background-color: #590083;
+}
+
+.progress-label {
+    margin-top: 30px;
+    font-size: 85%;
+    color: #d9d9d9;
+    display: flex;
+}
+
+/* Navegação da Sidebar */
+nav ul {
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li {
+    margin: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+.barra {
+  margin-top: auto;
+  font-size: smaller;
+}
+
+.barra li {
+  color: #737373;
+  font-weight: lighter;
+  list-style: none;
+
+}
+
+.barra ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+hr {
+    opacity: 0.4;
+    width: 300px;
+
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darker);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--dark);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 400px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--light);
+    flex: 1;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    gap: 20px;
+    color: var(--gray);
+}
+
+
+.user-actions i {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+.profile-container {
+    width: 90%;
+    margin: auto;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-header p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Abas de navegação */
+.profile-tabs {
+    display: flex;
+    margin: auto;
+    height: 35px;
+}
+
+.profile-tabs button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 70px;
+}
+
+.profile-tabs button:hover {
+    color: #7c3fc6; 
+    transition: color 0.3s ease; 
+}
+
+.profile-tabs button:hover:not(.active) {
+    transition: color 0.3s ease; 
+}
+
+.profile-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.profile-section {
+
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.profile-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-section h3 i {
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+.profile-links {
+    list-style: none;
+}
+
+.profile-links li {
+    padding: 8px 0;
+    color: var(--gray);
+}
+
+.profile-links li strong {
+    color: var(--light);
+}
+
+.progress-container {
+    margin-top: 15px;
+}
+
+.progress-track {
+    height: 6px;
+    background-color: var(--dark-gray);
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 3px;
+}
+
+.progress-container span {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+/* Estilos extras para o formulário de Alterar Senha */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: var(--light);
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #bbb;
+    color: #222;
+}
+
+/* Botão de envio (estilizado como elemento div) */
+.save-button {
+    background-color: #5e2a84;
+    color: #ffffff;
+    padding: 10px 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 150px;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.save-button:hover {
+    background-color: #7c3fc6;
+}

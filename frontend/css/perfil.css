@@ -110,11 +110,14 @@ nav ul li {
   font-weight: lighter;
 }
 
+.barra ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
 hr {
-    border: none;
-    height: 1px;
-    background-color: var(--dark-gray);
-    margin: 10px 0;
+    opacity: 0.4;
+    width: 300px;
 }
 
 /* Main Content */
