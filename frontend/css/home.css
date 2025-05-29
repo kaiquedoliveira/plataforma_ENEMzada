@@ -1,3 +1,4 @@
+
 /* Variáveis de cor */
 :root {
   --primary: #8a4fff;
@@ -221,6 +222,7 @@ body {
   .hero-subtitle {
     font-size: 1.2rem;
   }
+
  
  
   .section-title {
