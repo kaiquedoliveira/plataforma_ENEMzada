@@ -3,78 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Perfil - ENEMzada</title>
     <link rel="stylesheet" href="../css/perfil.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-  <div class="sidebar">
+    <!-- Sidebar -->
+      <div class="sidebar">
     <h1>ENEMzada</h1>
     <div class="profile">
       <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
-      <p class="username">braga</p>
+      <p class="username">Username</p>
       <div class="progress-label">
+        <p>Seu progresso</p>
+      </div>
+      <div class="progress-bar">
         <div class="progress"></div>
       </div>
     </div>
-    <nav>
-      <ul>
-         <a href="home.html">
-            <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
-         </a>
+
+        <nav >
+            <ul>
+                <a href="home.html">
+                    <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
+                </a>
         <hr />
-        <li> <i class="fa-solid fa-user space-icon"> </i> Minha Conta </li>
+        <li> <i class="fa-solid fa-user space-icon"> </i> Meu Perfil </li>
         <hr />
-         <a href="#">
-            <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
-         </a>
+         <a href="certificados.html">
+             <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
+            </a>
         <hr />
-         <a href="foto.html">
-            <li> <i class="fa-solid fa-camera space-icon"></i> Foto  </li>
-         </a>
-        <hr />
-         <a href="#">
-            <li> <i class="fa-solid fa-shield-halved space-icon"></i> política e privacidade  </li>
-         </a>
+        <a href="feedback.html">
+            <li> <i class="fa-solid fa-comment-dots space-icon"></i> Feedback </li>
+        </a>
         <hr />
       </ul>
-    </nav>
-    <div class="barra">
+        </nav>
+
+        <div class="barra">
       <nav>
         <ul>
-          <li >Suporte para Alunos</li>
+          <li class="active">Suporte para Alunos</li>
           <li>Termos de Uso / Políticas de Privacidade</li>
         </ul>
       </nav>
     </div>
-  </div> <!-- Main Content -->
- 
- 
-        <main class="content">
-            <h1>Perfil</h1>
-            <p>Adicione informações sobre você</p>
- 
-            <form>
-                <div class="profile-section">
-                    <label for="name">Dados básicos:</label>
-                    <input type="text" id="name" value="">
-                </div>
- 
-                <div class="profile-section">
-                    <label for="title">Profissão ou título:</label>
-                    <input type="text" id="title" value="">
-                    <small>Adicione um título profissional, como "Instrutor na Udemy" ou "Arquiteto".</small>
-                </div>
- 
-                <div class="profile-section">
-                    <label for="bio">Biografia:</label>
-                    <textarea id="bio"></textarea>
-                    <small>Não é permitido usar links e códigos de cupom nessa seção.</small>
-                </div>
-            </form>
-        </main>
     </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar matérias e aulas...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-universal-access"></i>
+            </div>
+        </header>
+
+        <div class="profile-content">
+
+            <div class="profile-header">
+                <div class="user-info">
+                    <h2>Meu Perfil</h2>
+                    <p>Apresente-se a Comunidade</p>
+
+                      <div class="profile-tabs">
+                     <button class="active">Meu Perfil</button>
+                    <button>Alterar Senha</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="profile-content">
+      <!-- Área da imagem e botão de upload -->
+      <div class="profile-image-area">
+        <div class="image-preview">
+          <img src="placeholder.png" alt="Visualização da imagem">
+        </div>
+        <div class="upload-container">
+          <label for="file-upload" class="upload-button">Fazer upload de imagem</label>
+          <input id="file-upload" type="file" accept="image/*">
+        </div>
+      </div>
+
+      <!-- Área das informações do perfil -->
+      <form class="profile-info">
+        <label for="nome_completo">Nome Completo:</label>
+        <input type="text" id="nome_completo" placeholder="Digite seu nome">
+
+        <label for="email_principal">E-mail Principal:</label>
+        <input type="email" id="email_principal" placeholder="Digite seu e-mail">
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento">
+
+        <label for="genero">Gênero:</label>
+        <select id="genero">
+          <option value="" disabled selected hidden>Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="nao_informar">Prefiro não informar</option>
+        </select>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" placeholder="000.000.000-00">
+
+         <label class="save-button">> salvar</label>
+      </form>
+    </div>
+
 </body>
 </html>
- 
