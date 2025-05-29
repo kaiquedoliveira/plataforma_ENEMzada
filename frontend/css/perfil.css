@@ -184,8 +184,8 @@ header {
 
 .user-info h2 {
   font-size: 2rem;
-  margin-top: 20px; /* Adiciona espaço acima */
-  margin-bottom: 10px; /* Adiciona espaço abaixo */
+  margin-top: 20px; 
+  margin-bottom: 10px; 
   text-align: center;
 }
 
