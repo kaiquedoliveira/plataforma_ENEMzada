@@ -10,37 +10,47 @@
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="sidebar">
-        <h1>ENEMzada</h1>
-        <div class="profile">
-            <div class="profile-pic">
-                <img src="../images/foto-user.jpg" alt="Foto do usuário">
-            </div>
-            <p class="username">Username</p>
-            <div class="progress-label">
-                <p>Seu progresso</p>
-            </div>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-        </div>
-        <nav class="main-nav">
+      <div class="sidebar">
+    <h1>ENEMzada</h1>
+    <div class="profile">
+      <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
+      <p class="username">Username</p>
+      <div class="progress-label">
+        <p>Seu progresso</p>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+        <nav >
             <ul>
-                <li><a href="./home.html"><i class="fas fa-home"></i> Início</a></li>
-                <hr>
-                <li><a href="./perfil.html" class="active"><i class="fas fa-user"></i> Minha Conta</a></li>
-                <hr>
-                <li><a href="./certificados.html"><i class="fas fa-certificate"></i> Central de Certificados</a></li>
-                <hr>
-            </ul>
+
+                <a href="home.html">
+                    <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
+                </a>
+        <hr />
+        <li> <i class="fa-solid fa-user space-icon"> </i> Meu Perfil </li>
+        <hr />
+         <a href="certificados.html">
+             <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
+            </a>
+        <hr />
+        <a href="feedback.html">
+            <li> <i class="fa-solid fa-comment-dots space-icon"></i> Feedback </li>
+        </a>
+        <hr />
+      </ul>
         </nav>
-        <nav class="secondary-nav">
-            <ul>
-                <li><a href="#"><i class="fas fa-comment"></i> Feedback</a></li>
-                <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
-                <li><a href="#"><i class="fas fa-file-contract"></i> Termos de Uso</a></li>
-            </ul>
-        </nav>
+
+        <div class="barra">
+      <nav>
+        <ul>
+          <li class="active">Suporte para Alunos</li>
+          <li>Termos de Uso / Políticas de Privacidade</li>
+        </ul>
+      </nav>
+    </div>
     </div>
 
     <!-- Main Content -->
@@ -57,39 +67,60 @@
         </header>
 
         <div class="profile-content">
+
             <div class="profile-header">
                 <div class="user-info">
-                    <h2>Fulano de tal</h2>
-                    <p>Seu programa</p>
+                    <h2>Meu Perfil</h2>
+                    <p>Apresente-se a Comunidade</p>
+
+                      <div class="profile-tabs">
+                     <button class="active">Meu Perfil</button>
+                    <button>Alterar Senha</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="profile-sections">
-                <section class="profile-section">
-                    <h3><i class="fas fa-home"></i> Início</h3>
-                    <ul class="profile-links">
-                        <li><strong>Fulano de tal</strong></li>
-                        <li>Control de Certificado</li>
-                    </ul>
-                </section>
-
-                <section class="profile-section">
-                    <h3><i class="fas fa-comment"></i> Feedback</h3>
-                    <p>Superior para obtener</p>
-                    <p>Termos de User / Políticas de Personalizar</p>
-                </section>
-
-                <section class="profile-section">
-                    <h3>Projetos quantitativos em alta</h3>
-                    <div class="progress-container">
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 75%;"></div>
-                        </div>
-                        <span>75% completo</span>
-                    </div>
-                </section>
-            </div>
-        </div>
     </div>
+
+    <div class="profile-content">
+      <!-- Área da imagem e botão de upload -->
+      <div class="profile-image-area">
+        <div class="image-preview">
+          <img src="placeholder.png" alt="Visualização da imagem">
+        </div>
+        <div class="upload-container">
+          <label for="file-upload" class="upload-button">Fazer upload de imagem</label>
+          <input id="file-upload" type="file" accept="image/*">
+        </div>
+      </div>
+
+      <!-- Área das informações do perfil -->
+      <form class="profile-info">
+        <label for="nome_completo">Nome Completo:</label>
+        <input type="text" id="nome_completo" placeholder="Digite seu nome">
+
+        <label for="email_principal">E-mail Principal:</label>
+        <input type="email" id="email_principal" placeholder="Digite seu e-mail">
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento">
+
+        <label for="genero">Gênero:</label>
+        <select id="genero">
+          <option value="" disabled selected hidden>Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="nao_informar">Prefiro não informar</option>
+        </select>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" placeholder="000.000.000-00">
+
+         <label class="save-button">> salvar</label>
+      </form>
+    </div>
+
 </body>
 </html>

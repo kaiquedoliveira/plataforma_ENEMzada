@@ -294,3 +294,9 @@ header {
   border-color: var(--primary);
   transform: translateY(-3px);
 }
+
+/* Card matemática - conteudo-1 */
+.card-link {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Mantém a cor original do texto */
+}
