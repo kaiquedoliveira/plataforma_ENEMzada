@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.terms-content {
+    padding: 30px;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    margin: 20px;
+    color: #d9d9d9;
+    line-height: 1.6;
+}
+
+.terms-content h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 2px solid #590083;
+    padding-bottom: 15px;
+}
+
+.terms-content h2 {
+    color: #fff;
+    margin: 25px 0 15px 0;
+    font-size: 1.5em;
+    border-bottom: 1px solid #590083;
+    padding-bottom: 8px;
+}
+
+.terms-content h3 {
+    color: #fff;
+    margin: 20px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.terms-content p {
+    margin-bottom: 15px;
+}
+
+.terms-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.terms-content li {
+    margin-bottom: 8px;
+}
+
+.highlight {
+    color: #590083;
+    font-weight: bold;
+}
+
+.last-update {
+    text-align: right;
+    font-style: italic;
+    color: #737373;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #373737;
+}
+
+
+.barra .active {
+    color: #590083;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 350px;
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1 {
+    text-align: center;
+    font-size: 160%;
+    margin-bottom: 70px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic img {
+    width: 110px;
+    height: 110px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #373737;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+
+.progress {
+    width: 75%;
+    height: 100%;
+    background-color: #590083;
+}
+
+.progress-label {
+    margin-top: 30px;
+    font-size: 85%;
+    color: #d9d9d9;
+    display: flex;
+}
+
+/* Navegação da Sidebar */
+nav ul {
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li {
+    margin: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit; 
+    display: flex; 
+    align-items: center;
+}
+
+hr {
+    opacity: 0.4;
+    width: 300px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 5;
+    background-color: black;
+    color: #fff;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: #1b1b1b;
+    height: 83px;
+}
+
+.user-icon {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.space-icon {
+    padding-right: 25px;
+}
+
+.barra {
+    margin-top: auto;
+    font-size: smaller;
+}
+
+.barra li {
+    color: #737373;
+    font-weight: lighter;
+}
+
+.barra ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.texto {
+    justify-items: left;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.botao {
+    justify-self: right;
+    margin-top: -49px;
+    margin-bottom: 25px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #373737;
+    border: none;
+    color: #f0f0f0;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 34em;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+    outline: none;
+    background-color: #373737;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+.search__input:focus+.search__button {
+    background-color: #373737;
+}
+
+.search__button {
+    border: none;
+    background-color: #373737;
+    margin-top: .1em;
+}
+
+.search__button:hover {
+    cursor: pointer;
+}
+
+.search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+}

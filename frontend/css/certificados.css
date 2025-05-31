@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.barra .active {
+    color: #590083;
+ 
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    height: 100vh;
+}
+ 
+/* Sidebar */
+.sidebar {
+    width: 350px;
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.sidebar h1 {
+    text-align: center;
+    font-size: 160%;
+    margin-bottom: 70px;
+}
+ 
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+ 
+.profile-pic img {
+    width: 110px;
+    height: 110px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+ 
+.username {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 10px;
+}
+ 
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #373737;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+ 
+.progress {
+    width: 75%;
+    height: 100%;
+    background-color: #590083;
+}
+ 
+.progress-label {
+    margin-top: 30px;
+    font-size: 85%;
+    color: #d9d9d9;
+    display: flex;
+}
+ 
+/* Navegação da Sidebar */
+nav ul {
+    list-style: none;
+    margin: 10px;
+    margin-top: 35px;
+}
+ 
+nav ul li {
+    margin: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+ 
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+ 
+hr {
+    opacity: 0.4;
+    width: 300px;
+}
+ 
+/* Main Content */
+.main-content {
+    flex: 5;
+    background-color: black;
+    color: #fff;
+    overflow-y: auto;
+}
+ 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: #1b1b1b;
+    height: 83px;
+}
+ 
+.user-icon {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+ 
+.space-icon {
+   margin-right: 5px;
+}
+ 
+.barra {
+    margin-top: auto;
+    font-size: smaller;
+}
+ 
+.barra li {
+    color: #737373;
+    font-weight: lighter;
+}
+ 
+.barra ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.texto {
+    justify-items: left;
+    margin-top: 10px;
+    padding: 20px;
+}
+ 
+.botao {
+    justify-self: right;
+    margin-top: -49px;
+    margin-bottom: 25px;
+}
+ 
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+ 
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #373737;
+    border: none;
+    color: #f0f0f0;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 34em;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+}
+ 
+.search__input:hover,
+.search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+ 
+.search__input:focus {
+    outline: none;
+    background-color: #373737;
+}
+ 
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+ 
+.search__input:focus+.search__button {
+    background-color: #373737;
+}
+ 
+.search__button {
+    border: none;
+    background-color: #373737;
+    margin-top: .1em;
+}
+ 
+.search__button:hover {
+    cursor: pointer;
+}
+ 
+.search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+}
+
+
+/* Estilos específicos para a Central de Certificados */
+.content {
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  height: 822px;
+}
+
+.content {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+}
+
+.contents h2 {
+  color: #f0f0f0;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.contents h2 i {
+  margin-right: 10px;
+  color: #f0f0f0;
+}
+
+.certificate-filters {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #333;
+  color: #b0b0b0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.filter-btn:hover:not(.active) {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  display: flex;
+}
+
+.certificate-card {
+  background-color: #252525;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-left: 5px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-header {
+  padding: 15px 20px;
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certificate-header h3 {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+.certificate-status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.certificate-status.completed {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.certificate-status.progress {
+  background-color: #ce4188;
+  color: #fff;
+}
+
+.certificate-body {
+  padding: 20px;
+}
+
+.certificate-info p {
+  margin: 8px 0;
+  color: #d9d9d9;
+  display: flex;
+  align-items: center;
+}
+
+.certificate-info i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.progress-bar-certificate {
+  width: 100%;
+  height: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  background-color: #590083;
+}
+
+.certificate-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.download-btn, .share-btn, .continue-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.download-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #2980b9;
+}
+
+.share-btn {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.share-btn:hover {
+  background-color: #8e44ad;
+}
+
+.continue-btn {
+  background-color: #1abc9c;
+  color: white;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.continue-btn:hover {
+  background-color: #169b80;
+}
+
+/* Estilo para quando não há certificados - modo escuro */
+.certificate-empty {
+  text-align: center;
+  padding: 50px 20px;
+  color: #7a7a7a;
+  background-color: #252525;
+  border-radius: 10px;
+  border: 1px dashed #333;
+}
+
+.empty-icon {
+  font-size: 50px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.certificate-empty h3 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.explore-courses-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.explore-courses-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Modal de compartilhamento - modo escuro */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #252525;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  border: 1px solid #444;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #7a7a7a;
+}
+
+.close-modal:hover {
+  color: #e0e0e0;
+}
+
+.share-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.social-share {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.social-share:hover {
+  opacity: 0.9;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.whatsapp {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.share-link {
+  margin-top: 20px;
+}
+
+.share-link label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+.link-container {
+  display: flex;
+}
+
+.link-container input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.copy-link {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.copy-link:hover {
+  background-color: #2980b9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .search {
+    width: 100%;
+  }
+  
+  .certificate-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificate-filters {
+    flex-wrap: wrap;
+  }
+  
+  .certificate-actions {
+    flex-direction: column;
+  }
+  
+  .share-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+ .active {
+  color: #590083;
+}

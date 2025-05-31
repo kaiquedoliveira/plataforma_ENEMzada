@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENEMzada - Central de Certificados</title>
+  <link rel="stylesheet" href="../css/certificados.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h1>ENEMzada</h1>
+    <div class="profile">
+      <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
+      <p class="username">Username</p>
+      <div class="progress-label">
+        <p>Seu progresso</p>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li> <a href="home.html"> <i class="fa-solid fa-house space-icon"></i>Início</a></li>
+        <hr />
+        <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i>Meu Perfil</a></li>
+        <hr />
+        <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i>Central de Certificados</a></li>
+        <hr />
+        <li><a href="feedback.html"> <i class="fa-solid fa-comment-dots space-icon"></i>Feedback</a></li>
+        <hr />
+        <li><a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i>Cursos</a></li>
+        <hr />
+      </ul>
+    </nav>
+    <div class="barra">
+      <nav>
+        <ul>
+          <li><a href="suporte.html">Suporte para Alunos</a></li>
+          <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <div class="search"> <input type="text" class="search__input" placeholder="Pesquisar certificados..."> <button
+          class="search__button"> <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg> </button> </div>
+      <div class="acessibilidade"
+        style=" display: flex; align-items: center; justify-content: space-between; width: 4%; margin-right: 50px; ">
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-universal-access"></i>
+      </div>
+    </header>
+    
+    <div class="content">
+      <div class="contents">
+        <h2><i class="fas fa-graduation-cap"></i> Central de Certificados</h2>
+        
+        <div class="certificate-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="completed">Concluídos</button>
+          <button class="filter-btn" data-filter="progress">Em Progresso</button>
+        </div>
+        
+        <div class="certificate-container">
+          <!-- Certificado 1 -->
+          <div class="certificate-card completed" data-course="matematica">
+            <div class="certificate-header">
+              <h3>Matemática Básica</h3>
+              <span class="certificate-status completed">Concluído</span>
+            </div>
+            <div class="certificate-body">
+              <div class="certificate-info">
+                <p><i class="fas fa-calendar-alt"></i> Concluído em: 15/05/2023</p>
+                <p><i class="fas fa-clock"></i> Carga horária: 40 horas</p>
+                <p><i class="fas fa-percentage"></i> Desempenho: 92%</p>
+              </div>
+              <div class="certificate-actions">
+                <button class="download-btn" onclick="downloadCertificate('matematica-basica')">
+                  <i class="fas fa-download"></i> Baixar Certificado
+                </button>
+                <button class="share-btn" onclick="shareCertificate('matematica-basica')">
+                  <i class="fas fa-share-alt"></i> Compartilhar
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificado 2 -->
+          <div class="certificate-card completed" data-course="portugues">
+            <div class="certificate-header">
+              <h3>Português Avançado</h3>
+              <span class="certificate-status completed">Concluído</span>
+            </div>
+            <div class="certificate-body">
+              <div class="certificate-info">
+                <p><i class="fas fa-calendar-alt"></i> Concluído em: 22/06/2023</p>
+                <p><i class="fas fa-clock"></i> Carga horária: 35 horas</p>
+                <p><i class="fas fa-percentage"></i> Desempenho: 88%</p>
+              </div>
+              <div class="certificate-actions">
+                <button class="download-btn" onclick="downloadCertificate('portugues-avancado')">
+                  <i class="fas fa-download"></i> Baixar Certificado
+                </button>
+                <button class="share-btn" onclick="shareCertificate('portugues-avancado')">
+                  <i class="fas fa-share-alt"></i> Compartilhar
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificado 3 -->
+          <div class="certificate-card progress" data-course="historia">
+            <div class="certificate-header">
+              <h3>História do Brasil</h3>
+              <span class="certificate-status progress">Em progresso (75%)</span>
+            </div>
+            <div class="certificate-body">
+              <div class="certificate-info">
+                <p><i class="fas fa-calendar-alt"></i> Iniciado em: 10/07/2023</p>
+                <p><i class="fas fa-clock"></i> Carga horária: 30 horas</p>
+                <p><i class="fas fa-percentage"></i> Progresso atual: 75%</p>
+              </div>
+              <div class="progress-bar-certificate">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <div class="certificate-actions">
+                <button class="continue-btn" onclick="continueCourse('historia-brasil')">
+                  <i class="fas fa-play"></i> Continuar Curso
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificado 4 -->
+          <div class="certificate-card progress" data-course="biologia">
+            <div class="certificate-header">
+              <h3>Biologia Celular</h3>
+              <span class="certificate-status progress">Em progresso (45%)</span>
+            </div>
+            <div class="certificate-body">
+              <div class="certificate-info">
+                <p><i class="fas fa-calendar-alt"></i> Iniciado em: 05/08/2023</p>
+                <p><i class="fas fa-clock"></i> Carga horária: 25 horas</p>
+                <p><i class="fas fa-percentage"></i> Progresso atual: 45%</p>
+              </div>
+              <div class="progress-bar-certificate">
+                <div class="progress-fill" style="width: 45%"></div>
+              </div>
+              <div class="certificate-actions">
+                <button class="continue-btn" onclick="continueCourse('biologia-celular')">
+                  <i class="fas fa-play"></i> Continuar Curso
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="certificate-empty" id="empty-certificates" style="display: none;">
+          <i class="fas fa-graduation-cap empty-icon"></i>
+          <h3>Nenhum certificado disponível</h3>
+          <p>Você ainda não concluiu nenhum curso. Continue estudando para obter seu primeiro certificado!</p>
+          <button class="explore-courses-btn" onclick="window.location.href='cursos.html'">
+            <i class="fas fa-book-open"></i> Explorar Cursos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para compartilhamento -->
+  <div id="shareModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h3>Compartilhar Certificado</h3>
+      <div class="share-options">
+        <button class="social-share facebook" onclick="shareOnSocial('facebook')">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </button>
+        <button class="social-share twitter" onclick="shareOnSocial('twitter')">
+          <i class="fab fa-twitter"></i> Twitter
+        </button>
+        <button class="social-share linkedin" onclick="shareOnSocial('linkedin')">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </button>
+        <button class="social-share whatsapp" onclick="shareOnSocial('whatsapp')">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </button>
+      </div>
+      <div class="share-link">
+        <label for="certificate-link">Link para compartilhar:</label>
+        <div class="link-container">
+          <input type="text" id="certificate-link" value="https://enemzada.com/certificado/123456" readonly>
+          <button class="copy-link" onclick="copyToClipboard()">
+            <i class="fas fa-copy"></i> Copiar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../js/certificados.js"></script>
+  <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

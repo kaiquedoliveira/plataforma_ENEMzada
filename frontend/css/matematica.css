@@ -1,0 +1,302 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.barra .active {
+  color: #590083;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 350px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h1 {
+  text-align: center;
+  font-size: 160%;
+  margin-bottom: 70px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-pic img {
+  width: 110px;
+  height: 110px;
+  background-color: #555;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 90%;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #373737;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+
+.progress {
+  width: 75%;
+  height: 100%;
+  background-color: #590083;
+}
+
+.progress-label {
+  margin-top: 30px;
+  font-size: 85%;
+  color: #d9d9d9;
+  display: flex;
+}
+
+/* Navegação da Sidebar */
+nav ul {
+  list-style: none;
+  margin: 10px;
+}
+
+nav ul li {
+  margin: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  opacity: 0.4;
+  width: 300px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 5;
+  background-color: black;
+  color: #fff;
+  overflow-y: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background: #1b1b1b;
+  height: 83px;
+}
+
+.user-icon {
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.space-icon {
+  padding-right: 25px;
+}
+
+.barra {
+  margin-top: auto;
+  font-size: smaller;
+}
+
+.barra li {
+  color: #737373;
+  font-weight: lighter;
+}
+
+.barra ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.texto {
+  justify-items: left;
+  margin-top: 10px;
+  padding: 20px;
+}
+.terms-content {
+  padding: 30px;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+  margin: 20px;
+  color: #d9d9d9;
+  line-height: 1.6;
+}
+.botao {
+  justify-self: right;
+  margin-top: -49px;
+  margin-bottom: 25px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #373737;
+  border: none;
+  color: #f0f0f0;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 34em;
+  transition: all ease-in-out 0.5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #373737;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus + .search__button {
+  background-color: #373737;
+}
+
+.search__button {
+  border: none;
+  background-color: #373737;
+  margin-top: 0.1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+
+
+.resources-grid {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  margin-top: 30px;
+}
+
+.resource-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.resource-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(138, 79, 255, 0.3);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.resource-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+
+.card-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.card-button:hover {
+  background-color: transparent;
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Card matemática - conteudo-1 */
+.card-link {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Mantém a cor original do texto */
+}
