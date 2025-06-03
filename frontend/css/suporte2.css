@@ -10,8 +10,6 @@
   font-weight: bold;
 }
 
-
-
 body {
   font-family: Arial, sans-serif;
   background: #f0f0f0;
@@ -211,7 +209,6 @@ header {
   fill: #b4b4b4;
 }
 
-
 /* css do chat */
 .chat-container {
   display: none;
@@ -225,7 +222,7 @@ header {
   z-index: 1000;
   flex-direction: column;
   height: 500px;
-
+}
 
 .chat-header {
   background-color: #590083;
@@ -264,7 +261,6 @@ header {
   border-radius: 8px;
   max-width: 80%;
   word-wrap: break-word;
-
 }
 
 .user-message {
@@ -278,7 +274,6 @@ header {
   margin-right: auto;
   border-bottom-left-radius: 0;
   color: #fff;
-
 }
 
 .chat-input {
@@ -288,7 +283,6 @@ header {
   background-color: #373737;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
 }
 
 .chat-input input {
@@ -346,53 +340,3 @@ header {
   display: none;
 }
 
-/* Adicione isso na seção de estilos existente */
-
-.pen-chat-btn {
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #862691 0%, #702e7d 100%);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 70%;
-  margin-top: 10px;
-}
-
-
-/* Animação ao passar o mouse */
-.sidebar:hover {
-    background: rgba(94, 42, 132, 0.3); /* Intensifica o efeito vidro */
-    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.4);
-}
-
-/* Estilização da lista */
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Itens de menu */
-.sidebar ul li {
-    margin: 15px 0;
-}
-
-/* Links do menu */
-.sidebar ul li a {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 12px 16px;
-    border-radius: 6px;
-    transition: all 0.5s ease;
-}
-}
