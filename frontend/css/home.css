@@ -1,3 +1,4 @@
+
 /* Variáveis de cor */
 :root {
   --primary: #8a4fff;
@@ -11,24 +12,24 @@
   --gray: #c9cdcf;
   --transition: all 0.3s ease-out;
 }
-
-
+ 
+ 
 /* Reset e estilos base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
+ 
+ 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
   color: var(--light);
   line-height: 1.6;
 }
-
-
+ 
+ 
 /* Header */
 .header {
   position: fixed;
@@ -36,8 +37,8 @@ body {
   width: 100%;
   z-index: 100;
 }
-
-
+ 
+ 
 .nav {
   display: flex;
   justify-content: space-between;
@@ -47,7 +48,7 @@ body {
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -55,16 +56,16 @@ body {
   text-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
   transition: var(--transition);
 }
-
+ 
 .logo:hover {
   text-shadow: 0 0 15px rgba(138, 79, 255, 0.8);
 }
-
+ 
 .nav-links {
   display: flex;
   gap: 1.5rem;
 }
-
+ 
 .nav-link {
   color: var(--light);
   text-decoration: none;
@@ -73,11 +74,11 @@ body {
   padding: 0.5rem 0;
   transition: var(--transition);
 }
-
+ 
 .nav-link.effect-1:hover {
   color: var(--primary);
 }
-
+ 
 .nav-link.effect-1::after {
   content: '';
   position: absolute;
@@ -88,21 +89,21 @@ body {
   background-color: var(--primary);
   transition: var(--transition);
 }
-
+ 
 .nav-link.effect-1:hover::after {
   width: 100%;
 }
-
+ 
 .nav-link.active {
   color: var(--primary);
   font-weight: 600;
 }
-
+ 
 .nav-link.active::after {
   width: 100%;
 }
-
-
+ 
+ 
 /* Hero Section */
 .hero {
   height: 60vh;
@@ -113,58 +114,58 @@ body {
   margin-top: 60px;
   background: linear-gradient(135deg, rgba(138, 79, 255, 0.2), rgba(26, 188, 156, 0.2));
 }
-
-
+ 
+ 
 .hero-content {
   text-align: center;
   z-index: 2;
 }
-
-
+ 
+ 
 .hero-title {
   font-size: 3rem;
   color: var(--light);
 }
-
-
+ 
+ 
 .hero-subtitle {
   font-size: 1.5rem;
   color: var(--gray);
 }
-
-
+ 
+ 
 /* Cards Section */
 .cards-section {
   padding: 2rem 1.5rem;
 }
-
-
+ 
+ 
 .section-intro {
   text-align: center;
   margin-bottom: 2rem;
 }
-
-
+ 
+ 
 .section-title {
   font-size: 2.5rem;
   color: var(--light);
   margin-bottom: 1rem;
 }
-
-
+ 
+ 
 .section-description {
   font-size: 1.2rem;
   color: var(--gray);
 }
-
-
+ 
+ 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-
-
+ 
+ 
 /* Cards that are links */
 .card {
   background: rgba(255, 255, 255, 0.03);
@@ -176,55 +177,56 @@ body {
   color: inherit; /* inherit text color */
   display: block; /* make block for full clickable area */
 }
-
-
+ 
+ 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(138, 79, 255, 0.3);
 }
-
-
+ 
+ 
 .card-title {
   font-size: 1.5rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
-
-
+ 
+ 
 .card-description {
   font-size: 1rem;
   color: var(--gray);
 }
-
-
+ 
+ 
 /* Footer */
 .footer {
   text-align: center;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.2);
 }
-
-
+ 
+ 
 .footer-text {
   font-size: 0.9rem;
   color: var(--gray);
 }
-
-
+ 
+ 
 /* Responsividade */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.2rem;
   }
-
-
+ 
+ 
   .hero-subtitle {
     font-size: 1.2rem;
   }
 
-
+ 
+ 
   .section-title {
     font-size: 2rem;
   }
 }
-
+ 

@@ -1,4 +1,4 @@
-const chatToggle = document.getElementById('chat-toggle');
+    const chatToggle = document.getElementById('chat-toggle');
     const chatContainer = document.getElementById('chat-container');
     const closeChat = document.getElementById('close-chat');
     const openChatBtn = document.getElementById('open-chat-btn');

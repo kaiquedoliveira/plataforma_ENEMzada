@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha - ENEMzada</title>
+    <link rel="stylesheet" href="../css/alterar-senha.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+      <div class="sidebar">
+    <h1>ENEMzada</h1>
+    <div class="profile">
+      <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
+      <p class="username">Username</p>
+      <div class="progress-label">
+        <p>Seu progresso</p>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+        <nav >
+            <ul>
+
+           <a href="home.html">
+        <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
+         </a>
+
+        <hr />
+        <li> <i class="fa-solid fa-user space-icon"> </i> Meu Perfil </li>
+        <hr />
+         <a href="certificados.html">
+             <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
+            </a>
+        <hr />
+        <a href="cursos.html">
+            <li> <i class="fa-solid fa-book space-icon"></i> Cursos </li>
+        </a>
+        <hr />
+      </ul>
+        </nav>
+
+        <div class="barra">
+      <nav>
+        <ul>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="suporte.html">Suporte para Alunos</a></li>
+          <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar matérias e aulas...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-universal-access"></i>
+            </div>
+        </header>
+
+        <div class="profile-content">
+
+            <div class="profile-header">
+                <div class="user-info">
+                    <h2>Alterar Senha</h2>
+                    <p>Esqueceu sua senha? Altere-a aqui.</p>
+
+                      <div class="profile-tabs">
+                        <a href="perfil.html">
+                            <button class="active">Meu Perfil</button>
+                        </a>
+                       <button>Alterar Senha</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="profile-container">
+      <form class="profile-info">
+               <div class="profile-info">
+                   <form action="#" method="post">
+         
+                    <label for="current-password">Senha Atual:</label>
+                   <input type="password" id="current-password" placeholder="Digite sua senha atual" />
+               
+               
+                  <label for="new-password">Nova Senha:</label>
+                  <input type="password" id="new-password" placeholder="Digite sua nova senha" />
+             
+             
+                 <label for="confirm-password">Confirmar Nova Senha:</label>
+                 <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" />
+            
+                    <label class="save-button">Alterar Senha</label>
+                </form>
+            </div>
+      </form>
+    </div>
+
+</body>
+</html>
