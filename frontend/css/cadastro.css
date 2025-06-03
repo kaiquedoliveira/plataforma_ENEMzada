@@ -298,18 +298,21 @@ body::before {
   color: var(--light);
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .image-text {
   font-size: 1.2rem;
   color: var(--gray);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .register-image {
   width: 1000px;
   height: auto;
   border-radius: 8px;
+  text-align: center;
 }
 
 /* Footer */
@@ -393,4 +396,33 @@ body::before {
   .image-title {
     font-size: 1.5rem;
   }
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Espaço para o ícone */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    color: #666;
 }

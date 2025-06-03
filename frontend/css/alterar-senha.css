@@ -327,7 +327,7 @@ header {
   background-color: #2c2c2c; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   width: 95%;
-  height: 56vh;
+  height: 52vh;
 }
 
 /* Área da imagem à esquerda */
@@ -423,3 +423,39 @@ header {
   border-radius: 5px;
 }
 
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Espaço para o ícone */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 60%; 
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    color: #666;
+}
+
+.password-info {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+}

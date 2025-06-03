@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!-- SIDEBAR -->
+    <!-- Sidebar -->
     <div class="sidebar">
         <h1>ENEMzada</h1>
         <div class="profile">
@@ -24,35 +24,28 @@
                 <div class="progress"></div>
             </div>
         </div>
+
+
         <nav>
             <ul>
-                <a href="home.html">
-                    <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
-                </a>
+                <a href="home.html"><li><i class="fa-solid fa-house space-icon"></i> Início</li></a>
                 <hr />
-                <li> <i class="fa-solid fa-user space-icon"> </i> Meu Perfil </li>
+                <li><i class="fa-solid fa-user space-icon"></i> Meu Perfil</li>
                 <hr />
-                <a href="certificados.html">
-                    <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
-                </a>
+                <a href="certificados.html"><li><i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados</li></a>
                 <hr />
-                <a href="feedback.html">
-                    <li> <i class="fa-solid fa-comment-dots space-icon"></i> Feedback </li>
-                </a>
-                <hr>
-                <a href="cursos.html">
-                    <li> <i class="fa-solid fa-book space-icon"></i> Cursos </li>
-                </a>
-                <hr>
+                <a href="cursos.html"><li><i class="fa-solid fa-book space-icon"></i> Cursos</li></a>
+                <hr />
             </ul>
-
         </nav>
 
         <div class="barra">
             <nav>
                 <ul>
-                    <li>Suporte para Alunos</li>
-                    <li>Termos de Uso / Políticas de Privacidade</li>
+
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="suporte.html">Suporte para Alunos</a></li>
+                    <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,17 +66,15 @@
                 </div>
             </header>
 
-            <!-- Card de Alterar Senha -->
-            <div class="profile-content">
+
+        <div class="profile-content">
+            <div class="profile-header">
                 <div class="user-info">
                     <h2>Alterar Senha</h2>
                     <p>Esqueceu sua senha? Altere-a aqui.</p>
-
-                   <div class="profile-tabs">
-                    <a href="perfil.html">
-                        <button class="active">Meu Perfil</button>
-                    </a>
-                       <button>Alterar Senha</button>
+                    <div class="profile-tabs">
+                        <a href="perfil.html"><button class="active">Meu Perfil</button></a>
+                        <button>Alterar Senha</button>
                     </div>
                 </div>  
                </div>
@@ -109,6 +100,56 @@
                 </section>
             </div>
         </div>
-</body>
 
+
+
+        <div class="profile-container">
+            <form class="profile-info">
+                <label for="current-password">Senha Atual:</label>
+                <div class="password-container">
+                    <input type="password" id="current-password" placeholder="Digite sua senha atual" />
+                    <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
+                </div>
+                  <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
+
+                <label for="new-password">Nova Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="new-password" placeholder="Digite sua nova senha" />
+                    <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
+                </div>
+                  <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
+
+                <label for="confirm-password">Confirmar Nova Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" />
+                    <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
+                </div>
+                  <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
+
+                 <label class="save-button">Alterar Senha</label>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".toggle-password").forEach(button => {
+            button.addEventListener("click", function () {
+                var passwordInput = this.previousElementSibling;
+                var icon = this.querySelector("i");
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                }
+            });
+        });
+    </script>
+
+</body>
 </html>
+
