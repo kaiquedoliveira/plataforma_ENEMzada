@@ -10,49 +10,41 @@
 </head>
 <body>
     <!-- Sidebar -->
-      <div class="sidebar">
-    <h1>ENEMzada</h1>
-    <div class="profile">
-      <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
-      <p class="username">Username</p>
-      <div class="progress-label">
-        <p>Seu progresso</p>
-      </div>
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-    </div>
+    <div class="sidebar">
+        <h1>ENEMzada</h1>
+        <div class="profile">
+            <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
+            <p class="username">Username</p>
+            <div class="progress-label">
+                <p>Seu progresso</p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
 
-        <nav >
+        <nav>
             <ul>
-
-           <a href="home.html">
-        <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
-         </a>
-
-        <hr />
-        <li> <i class="fa-solid fa-user space-icon"> </i> Meu Perfil </li>
-        <hr />
-         <a href="certificados.html">
-             <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
-            </a>
-        <hr />
-        <a href="cursos.html">
-            <li> <i class="fa-solid fa-book space-icon"></i> Cursos </li>
-        </a>
-        <hr />
-      </ul>
+                <a href="home.html"><li><i class="fa-solid fa-house space-icon"></i> Início</li></a>
+                <hr />
+                <li><i class="fa-solid fa-user space-icon"></i> Meu Perfil</li>
+                <hr />
+                <a href="certificados.html"><li><i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados</li></a>
+                <hr />
+                <a href="cursos.html"><li><i class="fa-solid fa-book space-icon"></i> Cursos</li></a>
+                <hr />
+            </ul>
         </nav>
 
         <div class="barra">
-      <nav>
-        <ul>
-          <li><a href="feedback.html">Feedback</a></li>
-          <li><a href="suporte.html">Suporte para Alunos</a></li>
-          <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
-        </ul>
-      </nav>
-    </div>
+            <nav>
+                <ul>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="suporte.html">Suporte para Alunos</a></li>
+                    <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 
     <!-- Main Content -->
@@ -69,43 +61,62 @@
         </header>
 
         <div class="profile-content">
-
             <div class="profile-header">
                 <div class="user-info">
                     <h2>Alterar Senha</h2>
                     <p>Esqueceu sua senha? Altere-a aqui.</p>
 
-                      <div class="profile-tabs">
-                        <a href="perfil.html">
-                            <button class="active">Meu Perfil</button>
-                        </a>
-                       <button>Alterar Senha</button>
+                    <div class="profile-tabs">
+                        <a href="perfil.html"><button class="active">Meu Perfil</button></a>
+                        <button>Alterar Senha</button>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="profile-container">
+            <form class="profile-info">
+                <label for="current-password">Senha Atual:</label>
+                <div class="password-container">
+                    <input type="password" id="current-password" placeholder="Digite sua senha atual" />
+                    <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
+                </div>
+
+                <label for="new-password">Nova Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="new-password" placeholder="Digite sua nova senha" />
+                    <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
+                </div>
+
+                <label for="confirm-password">Confirmar Nova Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" />
+                    <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
+                </div>
+
+                 <label class="save-button">Alterar Senha</label>
+            </form>
+        </div>
     </div>
 
-    <div class="profile-container">
-      <form class="profile-info">
-               <div class="profile-info">
-                   <form action="#" method="post">
-         
-                    <label for="current-password">Senha Atual:</label>
-                   <input type="password" id="current-password" placeholder="Digite sua senha atual" />
-               
-               
-                  <label for="new-password">Nova Senha:</label>
-                  <input type="password" id="new-password" placeholder="Digite sua nova senha" />
-             
-             
-                 <label for="confirm-password">Confirmar Nova Senha:</label>
-                 <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" />
-            
-                    <label class="save-button">Alterar Senha</label>
-                </form>
-            </div>
-      </form>
-    </div>
+    <script>
+        document.querySelectorAll(".toggle-password").forEach(button => {
+            button.addEventListener("click", function () {
+                var passwordInput = this.previousElementSibling;
+                var icon = this.querySelector("i");
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
