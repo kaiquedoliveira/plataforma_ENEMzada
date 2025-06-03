@@ -7,14 +7,6 @@ const mysql = require('mysql2');
 
 const router = express.Router();
 
-// Conexão com o banco de dados MySQL
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Kaique@08',
-    database: 'plataforma_Enem',
-});
-
 // 📌 Rota de cadastro
 router.post(
     '/register',
