@@ -2,8 +2,8 @@ const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'admin',
-  password: 'root',
+  user: 'root',
+  password: 'admin',
   database: 'plataforma_enem',
   ssl: false,
   port: 3306

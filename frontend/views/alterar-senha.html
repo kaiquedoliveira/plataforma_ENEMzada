@@ -55,15 +55,20 @@
     <div class="main-content">
         <!-- Cabeçalho -->
         <div class="main-content">
-            <header>
-                <div class="search-bar">
-                    <input type="text" placeholder="Pesquisar matérias e aulas...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div class="user-actions">
-                    <i class="fas fa-bell"></i>
-                    <i class="fas fa-universal-access"></i>
-                </div>
+    <header>
+      <div class="search"> <input type="text" class="search__input" placeholder="Pesquisar matérias e aulas..."> <button
+          class="search__button"> <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg> </button> </div>
+      <div class="acessibilidade"
+        style=" display: flex; align-items: center; justify-content: space-between; width: 4%; margin-right: 50px; ">
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-universal-access"></i>
+      </div>
             </header>
 
 
@@ -72,32 +77,10 @@
                 <div class="user-info">
                     <h2>Alterar Senha</h2>
                     <p>Esqueceu sua senha? Altere-a aqui.</p>
-                    <div class="profile-tabs">
-                        <a href="perfil.html"><button class="active">Meu Perfil</button></a>
-                        <button>Alterar Senha</button>
-                    </div>
                 </div>  
                </div>
     
-                <section class="profile-info">
-                    <div class="profile-info">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label for="current-password">Senha Atual:</label>
-                                <input type="password" id="current-password" placeholder="Digite sua senha atual" />
-                            </div>
-                            <div class="form-group">
-                                <label for="new-password">Nova Senha:</label>
-                                <input type="password" id="new-password" placeholder="Digite sua nova senha" />
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm-password">Confirmar Nova Senha:</label>
-                                <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" />
-                            </div>
-                            <div class="save-button">Alterar Senha</div>
-                        </form>
-                    </div>
-                </section>
+    
             </div>
         </div>
 
@@ -110,7 +93,6 @@
                     <input type="password" id="current-password" placeholder="Digite sua senha atual" />
                     <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
                 </div>
-                  <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
 
                 <label for="new-password">Nova Senha:</label>
                 <div class="password-container">
@@ -124,7 +106,6 @@
                     <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" />
                     <button type="button" class="toggle-password"><i class="fa fa-eye"></i></button>
                 </div>
-                  <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
 
                  <label class="save-button">Alterar Senha</label>
             </form>
