@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - ENEMzada</title>
   
   <link rel="stylesheet" href="../css/login.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <!-- Navbar -->
 
+  <!-- Navbar -->
   <header class="header">
     <nav class="navbar">
       <div class="logo">ENEMzada</div>
@@ -25,19 +27,30 @@
   <main class="login-container">
     <div class="login-form-container">
       <div class="form-content">
-        <h2 class="form-title">Junte-se à nós</h2>
+        <h2 class="form-title">Junte-se a nós</h2>
         <form id="login-form" class="form">
           <div class="form-group">
             <label for="email" class="form-label">E-mail:</label>
-            <input type="email" id="email" name="email" class="form-input" required>
+            <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
           </div>
           
           <div class="form-group">
             <label for="senha" class="form-label">Senha:</label>
-            <input type="password" id="senha" name="senha" class="form-input" required>
+            <div class="password-container">
+                <input type="password" id="senha" name="senha" class="form-input" autocomplete="current-password" required>
+                <button type="button" id="toggle-password" class="toggle-password">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
           </div>
 
           <button type="submit" class="form-button">Entrar</button>
+          
+          <div class="form-footer">   
+            <p class="register-link">
+              <a href="../views/esqueceu-a-senha.html">Esqueci minha senha</a>
+            </p>
+          </div>
         </form>
         
         <div class="form-footer">
@@ -75,6 +88,22 @@
 
   <!-- Footer -->
 
-  <script src="../js/login.js"></script>
+  <script>
+    document.getElementById("toggle-password").addEventListener("click", function() {
+        var senhaInput = document.getElementById("senha");
+        var icon = this.querySelector("i");
+
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            senhaInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    });
+  </script>
+
 </body>
 </html>
