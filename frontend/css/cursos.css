@@ -91,9 +91,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: inherit; 
-    display: flex; 
     align-items: center;
-    font-size: 16px;
 }
 
 .active {
@@ -120,6 +118,10 @@ header {
     margin-bottom: 20px;
     background: #1b1b1b;
     height: 83px;
+}
+
+.space-icon{
+ padding-right: 25px;
 }
 
 .user-icon {
@@ -215,9 +217,7 @@ header {
     scrollbar-width: none;
 }
 
-.space-icon {
-    margin-right: 5px;
-}
+
 
 .barra {
     margin-top: auto;

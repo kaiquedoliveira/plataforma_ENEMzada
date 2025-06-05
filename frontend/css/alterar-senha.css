@@ -18,90 +18,96 @@ body {
  
 /* Sidebar */
 .sidebar {
-    width: 350px;
-    background-color: #1b1b1b;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    
+  width: 350px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
- 
-.sidebar nav ul a{
-    text-decoration: none;
-}
+
 .sidebar h1 {
-    text-align: center;
-    font-size: 160%;
-    margin-bottom: 70px;
+  text-align: center;
+  font-size: 160%;
+  margin-bottom: 70px;
 }
- 
+
 .profile {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
- 
+
 .profile-pic img {
-    width: 110px;
-    height: 110px;
-    background-color: #555;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
+  width: 110px;
+  height: 110px;
+  background-color: #555;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
 }
- 
+
 .username {
-    font-weight: bold;
-    font-size: 90%;
-    margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 90%;
+  margin-bottom: 10px;
 }
- 
+
 .progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #373737;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 10px 0;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 8px;
+  background-color: #373737;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  margin-bottom: 30px;
 }
- 
+
 .progress {
-    width: 75%;
-    height: 100%;
-    background-color: #590083;
+  width: 75%;
+  height: 100%;
+  background-color: #590083;
 }
- 
+
 .progress-label {
-    margin-top: 30px;
-    font-size: 85%;
-    color: #d9d9d9;
-    display: flex;
+  margin-top: 30px;
+  font-size: 85%;
+  color: #d9d9d9;
+  display: flex;
 }
- 
+
 /* Navegação da Sidebar */
 nav ul {
-    list-style: none;
-    margin: 10px;
+  list-style: none;
+  margin: 10px;
+  margin-top: 35px;
 }
- 
+
 nav ul li {
-    margin: 17px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #d9d9d9;
+  margin: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #d9d9d9;
 }
- 
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
+
+.barra {
+  margin-top: auto;
+  font-size: smaller;
 }
- 
+
+.barra li {
+  color: #737373;
+  font-weight: lighter;
+}
+
+.barra ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 hr {
-    opacity: 0.4;
-    width: 300px;
+  opacity: 0.4;
+  width: 300px;
 }
+
  
 /* Main Content */
 .main-content {
