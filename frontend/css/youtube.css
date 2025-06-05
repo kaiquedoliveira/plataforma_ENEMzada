@@ -338,3 +338,11 @@ header {
     font-size: 1rem;
     color: #333;
 }
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+ 
+  color: white;
+}
+
