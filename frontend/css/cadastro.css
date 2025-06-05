@@ -119,6 +119,7 @@ body::before {
   display: flex;
   min-height: 100vh;
   padding-top: 80px;
+  
 }
 
 .register-form-container {
@@ -127,7 +128,7 @@ body::before {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin-right: 200px;
+ margin-left: -115px;
 }
 
 .form-content {
@@ -302,6 +303,7 @@ body::before {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
    margin-top: 200px;
+  margin-right: 90px;
 }
 
 .image-text {
@@ -309,6 +311,7 @@ body::before {
   color: var(--gray);
   margin-bottom: 2rem;
   text-align: center;
+  margin-right: 90px;
  
 }
 
@@ -317,7 +320,9 @@ body::before {
   height: auto;
   border-radius: 8px;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -35px;
+  margin-right: 80px;
+
 }
 
 /* Footer */
@@ -354,6 +359,7 @@ body::before {
   .register-container {
     flex-direction: column;
     padding-top: 70px;
+   
   }
   
   .register-image-container {

@@ -251,6 +251,10 @@ header {
   margin-bottom: 5px;
 }
 
+.space-icon{
+ padding-right: 25px;
+}
+
 .progress-fill {
   height: 100%;
   background-color: var(--primary);

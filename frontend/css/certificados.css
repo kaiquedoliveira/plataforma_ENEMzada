@@ -140,9 +140,10 @@ header {
     font-weight: bold;
 }
  
-.space-icon {
-   margin-right: 5px;
+.space-icon{
+ padding-right: 28px;
 }
+
  
 .barra {
     margin-top: auto;
