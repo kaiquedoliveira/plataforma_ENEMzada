@@ -210,6 +210,11 @@ header {
     fill: #b4b4b4;
 }
 
+
+.space-icon{
+ padding-right: 25px;
+}
+
 /* Feedback */
 .feedback-container {
   max-width: 1800px;
