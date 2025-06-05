@@ -324,8 +324,8 @@ body::before {
 .footer {
   text-align: center;
   padding: 1.5rem;
-  mix-blend-mode: multiply;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+ 
+  color: white;
 }
 
 .footer-text {
