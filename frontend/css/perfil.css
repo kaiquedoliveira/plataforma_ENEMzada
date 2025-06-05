@@ -45,8 +45,10 @@ body {
   margin-bottom: 70px;
 }
 
-.sidebar nav ul a{
-  text-decoration:none;
+
+.sidebar nav ul a {
+  text-decoration: none;
+
 }
 
 .profile {
