@@ -55,8 +55,9 @@ body {
   color: var(--light);
   text-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
   transition: var(--transition);
+  animation: glow 1.5s infinite alternate;
 }
- 
+
 .logo:hover {
   text-shadow: 0 0 15px rgba(138, 79, 255, 0.8);
 }
