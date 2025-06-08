@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.barra .active {
-    color: #590083;
-
-}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -25,6 +21,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none;
+  color: white; /* ou a cor que você estiver usando */
+}
+
 
 .sidebar h1 {
     text-align: center;
@@ -83,7 +87,6 @@ nav ul {
 
 nav ul li {
     margin: 17px;
-    cursor: pointer;
     font-weight: bold;
     color: #d9d9d9;
 }

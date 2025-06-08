@@ -46,17 +46,21 @@ body {
 }
 
 
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--light);
   text-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
   transition: var(--transition);
-  font-size: bold;
+  animation: glow 1.5s infinite alternate;
+  text-decoration: none;
+  
 }
+
  
 .logo:hover {
-  text-shadow: 0 0 15px rgba(138, 79, 255, 0.8);
+  text-shadow: 0 0 25px rgba(138, 79, 255, 0.8);
 }
 
 
@@ -80,6 +84,30 @@ body {
     color: var(--primary);
 }
 
+.nav-link.effect-1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  transition: var(--transition);
+}
+ 
+.nav-link.effect-1:hover::after {
+  width: 100%;
+}
+ 
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+ 
+.nav-link.active::after {
+  width: 100%;
+}
+ 
 
 /* Hero Section */
 .hero {

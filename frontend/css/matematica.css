@@ -31,6 +31,15 @@ body {
   flex-direction: column;
 }
 
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none;
+  color: white; /* ou a cor que você estiver usando */
+}
+
+
 .sidebar h1 {
   text-align: center;
   font-size: 160%;

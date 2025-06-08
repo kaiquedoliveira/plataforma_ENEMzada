@@ -22,6 +22,8 @@ body {
   height: 100vh;
   background-color: var(--darker);
   color: var(--light);
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .barra .active {
