@@ -118,6 +118,13 @@ body {
     position: relative;
     margin-top: 60px;
     background: linear-gradient(135deg, rgba(138, 79, 255, 0.2), rgba(26, 188, 156, 0.2));
+     background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../images/noticias.jpg'); /* <-- substitua pelo caminho correto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2%;
 }
 
 
@@ -132,6 +139,9 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--light);
+    text-shadow: 0 0 10px rgba(48, 7, 102, 0.5);
+  transition: var(--transition);
+  animation: glow 6.5s infinite alternate;
 }
 
 
@@ -139,6 +149,9 @@ body {
     font-size: 1.5rem;
     color: var(--gray);
     margin-bottom: 2rem;
+      text-shadow: 0 0 10px rgba(48, 7, 102, 0.5);
+  transition: var(--transition);
+  animation: glow 6.5s infinite alternate;
 }
 
 
