@@ -1,36 +1,14 @@
-:root {
-  --primary: #8a4fff;
-  --primary-light: rgba(138, 79, 255, 0.1);
-  --dark: #1b1b1b;
-  --darker: #121212;
-  --light: #ffffff;
-  --gray: #c9cdcf;
-  --dark-gray: #373737;
-}
-
-/* Reset e estilos base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- 
-.barra .active {
-    color: #590083;
- 
-}
- 
+
 body {
     font-family: 'Nunito', sans-serif;
     background: #f0f0f0;
     display: flex;
     height: 100vh;
-}
- 
-/* Sidebar */
-.barra .active {
-  color: #590083;
-  font-weight: bold;
 }
 
 /* Sidebar */
@@ -43,10 +21,24 @@ body {
   flex-direction: column;
 }
 
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none;
+  color: white; /* ou a cor que você estiver usando */
+}
+
 .sidebar h1 {
   text-align: center;
   font-size: 160%;
   margin-bottom: 70px;
+}
+
+
+.sidebar nav ul a {
+  text-decoration: none;
+
 }
 
 .profile {
@@ -59,7 +51,7 @@ body {
   height: 110px;
   background-color: #555;
   border-radius: 50%;
-  margin: 0 auto 10px auto;
+  margin: 10px auto;
 }
 
 .username {
@@ -90,32 +82,65 @@ body {
   color: #d9d9d9;
   display: flex;
 }
+
 /* Navegação da Sidebar */
 nav ul {
-    list-style: none;
-    margin: 10px;
-    margin-top: 35px;
+  list-style: none;
+  margin: 10px;
+  margin-top: 55px;
 }
- 
+
 nav ul li {
-    margin: 17px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #d9d9d9;
+  margin: 17px;
+  font-weight: bold;
+  color: #d9d9d9;
 }
- 
+
 nav ul li a {
     text-decoration: none;
-    color: inherit;
-    display: flex;
+    color: inherit; 
     align-items: center;
+    margin-top: 10px;;
 }
- 
+
+.active {
+    color: #590083;
+}
+
 hr {
     opacity: 0.4;
     width: 300px;
 }
+
+
+.barra {
+    margin-top: auto;
+    font-size: smaller;
+}
  
+.barra li {
+    color: #737373;
+    font-weight: lighter;
+}
+ 
+.barra ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.space-icon{
+ padding-right: 25px;
+}
+
+.user-icon {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+
 /* Main Content */
 .main-content {
     flex: 5;
@@ -133,33 +158,10 @@ header {
     height: 83px;
 }
  
-.user-icon {
-    padding: 10px 15px;
-    text-align: center;
-    font-size: 0.9em;
-    font-weight: bold;
-}
- 
-.space-icon{
- padding-right: 28px;
-}
+
 
  
-.barra {
-    margin-top: auto;
-    font-size: smaller;
-}
- 
-.barra li {
-    color: #737373;
-    font-weight: lighter;
-}
- 
-.barra ul li a {
-    text-decoration: none;
-    color: inherit;
-}
- 
+
 .texto {
     justify-items: left;
     margin-top: 10px;
@@ -171,14 +173,13 @@ header {
     margin-top: -49px;
     margin-bottom: 25px;
 }
- 
-.search {
+ .search {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
 }
- 
+
 .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -191,36 +192,36 @@ header {
     transition: all ease-in-out .5s;
     margin-right: -2rem;
 }
- 
+
 .search__input:hover,
 .search__input:focus {
     box-shadow: 0 0 1em #00000013;
 }
- 
+
 .search__input:focus {
     outline: none;
     background-color: #373737;
 }
- 
+
 .search__input::-webkit-input-placeholder {
     font-weight: 100;
     color: #ccc;
 }
- 
+
 .search__input:focus+.search__button {
     background-color: #373737;
 }
- 
+
 .search__button {
     border: none;
     background-color: #373737;
     margin-top: .1em;
 }
- 
+
 .search__button:hover {
     cursor: pointer;
 }
- 
+
 .search__icon {
     height: 1.3em;
     width: 1.3em;
@@ -235,7 +236,7 @@ header {
   padding: 25px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  height: 822px;
+  height: 900px;
 }
 
 .content {
@@ -550,6 +551,9 @@ header {
   display: flex;
 }
 
+.h3 header {
+  color:white
+}
 .link-container input {
   flex-grow: 1;
   padding: 10px;
@@ -562,7 +566,7 @@ header {
 
 .copy-link {
   padding: 10px 15px;
-  background-color: #3498db;
+  background-color: #8e44ad;
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -576,7 +580,13 @@ header {
   background-color: #2980b9;
 }
 
-/* Responsividade */
+.title {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+
+/* Responsividade 
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
@@ -618,6 +628,4 @@ header {
   }
 }
 
- .active {
-  color: #590083;
-}
+*/
