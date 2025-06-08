@@ -21,7 +21,7 @@
 
 html, body {
   height: 100%;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--light);
   line-height: 1.6;   
   background: var(--dark) url('../images/indexImagem.png') no-repeat center center;
