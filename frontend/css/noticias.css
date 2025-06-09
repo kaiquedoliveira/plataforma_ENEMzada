@@ -217,6 +217,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.icon {
+    font-size: 2rem;
+}
+
 
 /* Button */
 .btn {

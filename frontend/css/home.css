@@ -143,9 +143,8 @@ body {
   font-size: 3rem;
   color: var(--light);
    color: var(--light);
-  text-shadow: 0 0 10px rgba(48, 7, 102, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.273);
   transition: var(--transition);
-  animation: glow 6.5s infinite alternate;
 }
  
  
@@ -153,9 +152,8 @@ body {
   font-size: 1.5rem;
   color: var(--gray);
    color: var(--light);
-  text-shadow: 0 0 10px rgba(48, 7, 102, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.251);
   transition: var(--transition);
-  animation: glow 6.5s infinite alternate;
 }
  
  
@@ -244,21 +242,85 @@ body {
 }
  
  
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(200, 163, 207, 0.5), 
+                 0 0 10px rgba(72, 30, 128, 0.5), 
+                 0 0 15px rgba(231, 231, 231, 0.3), 
+                 0 0 20px rgba(70, 16, 158, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(200, 163, 207, 0.8), 
+                 0 0 20px rgba(72, 30, 128, 0.8), 
+                 0 0 30px rgba(231, 231, 231, 0.5), 
+                 0 0 40px rgba(70, 16, 158, 0.8);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Responsividade */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .team-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
   .hero-title {
     font-size: 2.2rem;
   }
- 
- 
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
- 
- 
+  
   .section-title {
     font-size: 2rem;
+  }
+  
+  .about-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .team-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
   }
 }
  

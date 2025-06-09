@@ -80,6 +80,7 @@ h1, h2, h3, h4 {
   text-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
   transition: var(--transition);
   animation: glow 1.5s infinite alternate;
+  text-decoration: none;
 }
 
 .logo:hover {
