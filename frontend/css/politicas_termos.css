@@ -18,7 +18,7 @@
     margin-bottom: 30px;
     font-size: 2em;
     text-align: center;
-    border-bottom: 2px solid #590083;
+    border-bottom: 2px solid #555;
     padding-bottom: 15px;
 }
 
@@ -26,7 +26,7 @@
     color: #fff;
     margin: 25px 0 15px 0;
     font-size: 1.5em;
-    border-bottom: 1px solid #590083;
+    border-bottom: 1px solid #555;
     padding-bottom: 8px;
 }
 
@@ -57,10 +57,10 @@
 .last-update {
     text-align: right;
     font-style: italic;
-    color: #737373;
+    color: #ffffff;
     margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid #373737;
+    border-top: 1px solid #555;
 }
 
 
