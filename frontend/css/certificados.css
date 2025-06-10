@@ -131,7 +131,7 @@ body.contraste .notification-container {
 nav ul {
   list-style: none;
   margin: 10px;
-  margin-top: 55px;
+  margin-top: 25px;
 }
 
 nav ul li {
@@ -628,6 +628,7 @@ header {
   position: relative;
   border: 1px solid #444;
 }
+
 
 .close-modal {
   position: absolute;

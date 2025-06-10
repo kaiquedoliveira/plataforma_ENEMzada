@@ -239,8 +239,8 @@ header {
   font-weight: bold;
 }
 
-.space-icon {
-    margin-right: 1px;
+.space-icon{
+ padding-right: 25px;
 }
 
 .barra {
@@ -362,7 +362,15 @@ header {
   fill: #b4b4b4;
 }
 
+.header-arrow-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.header-arrow-text a{
+    color: #d9d9d9;
+}
 
 .resources-grid {
   display: grid;
@@ -447,3 +455,4 @@ header {
     text-decoration: none; /* Remove o sublinhado do link */
     color: inherit; /* Mantém a cor original do texto */
 }
+
