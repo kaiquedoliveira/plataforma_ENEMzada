@@ -78,13 +78,13 @@
             </div>
 
             <!-- Notificações -->
-            <div class="notification-container" id="notificationContainer" style="display: none;">
+             <div class="notification-container" id="notificationContainer" style="display: none;">
                 <div class="notification-header">
                     <h2>Notificações</h2>
                     <button id="close-notifications" class="close-button">X</button>
                 </div>
                 <div class="notification-content">
-                    <p>Você não tem novas notificações</p>
+                    <p>Bem Vindo ao Enemzada</p>
                 </div>
             </div>
         </header>
@@ -139,6 +139,29 @@ O chat pode ser acessado de duas formas:
   <div class="chat-toggle" id="chat-toggle">
     <i class="fa-solid fa-comment-dots"></i>
   </div>
+
+  <script>
+      document.getElementById("notificationBtn").addEventListener("click", function () {
+  const badge = document.getElementById("notificationBadge");
+  const notificationContent = document.getElementById("notificationContent");
+
+
+  badge.style.display = "none";
+
+
+  notificationContent.innerHTML = "<p>Você não tem novas notificações</p>";
+
+  
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "block";
+});
+
+
+document.getElementById("close-notifications").addEventListener("click", function () {
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "none";
+});
+     </script>
 
   <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
   <script src="../js/suporte.js"></script>

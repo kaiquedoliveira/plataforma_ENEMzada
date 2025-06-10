@@ -64,10 +64,12 @@
                 </button>
             </div>
 
-            <div class="acessibilidade">
-                <i class="fa-solid fa-bell" id="notificationBtn"></i>
-                <i class="fa-solid fa-universal-access" id="acessibilidadeBtn"></i>
-            </div>
+             <div class="acessibilidade">
+             <i class="fa-solid fa-bell" id="notificationBtn"></i>
+             <span class="notification-badge" id="notificationBadge">1</span>
+            <i class="fa-solid fa-universal-access" id="acessibilidadeBtn"></i>
+           </div> 
+
 
             <!-- Menu de acessibilidade -->
             <div class="acessibilidade-menu" id="menuAcessibilidade" aria-hidden="true" style="display: none;">
@@ -86,9 +88,8 @@
                     <button id="close-notifications" class="close-button">X</button>
                 </div>
                 <div class="notification-content">
-                    <p>Você não tem novas notificações</p>
+                    <p>Bem Vindo ao Enemzada</p>
                 </div>
-            </div>
         </header>
     
     <div class="content">
@@ -234,6 +235,29 @@
       </div>
     </div>
   </div>
+
+   <script>
+      document.getElementById("notificationBtn").addEventListener("click", function () {
+  const badge = document.getElementById("notificationBadge");
+  const notificationContent = document.getElementById("notificationContent");
+
+
+  badge.style.display = "none";
+
+
+  notificationContent.innerHTML = "<p>Você não tem novas notificações</p>";
+
+  
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "block";
+});
+
+
+document.getElementById("close-notifications").addEventListener("click", function () {
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "none";
+});
+     </script>
   
   <script src="../js/certificados.js"></script>
     <script src="../js/notificacoes.js"></script>
