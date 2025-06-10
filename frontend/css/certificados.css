@@ -95,7 +95,7 @@ body.contraste .notification-container {
   height: 110px;
   background-color: #555;
   border-radius: 50%;
-  margin: 10px auto;
+  margin: 0 auto 10px auto;
 }
 
 .username {
@@ -131,7 +131,7 @@ body.contraste .notification-container {
 nav ul {
   list-style: none;
   margin: 10px;
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 nav ul li {
