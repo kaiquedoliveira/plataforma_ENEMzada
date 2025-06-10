@@ -187,6 +187,7 @@ body.contraste .notification-container {
 nav ul {
     list-style: none;
     margin: 10px;
+     margin-top: 34px;
 }
 
 nav ul li {
@@ -404,4 +405,8 @@ header {
     height: 1.3em;
     width: 1.3em;
     fill: #b4b4b4;
+}
+
+.acessibilidade {
+margin-right: 55px;
 }

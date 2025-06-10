@@ -655,3 +655,7 @@ header {
 .password-container input {
     padding-left: 30px; /* Add left padding to make space for icon */
 }
+
+.acessibilidade {
+margin-right: 55px;
+}
