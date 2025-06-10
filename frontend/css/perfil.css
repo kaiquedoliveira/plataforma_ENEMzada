@@ -43,9 +43,9 @@ body.contraste a {
 
 /* Botões */
 body.contraste button {
-  background-color: #111 !important;
+ 
   color: #00ffff !important;
-  border: 1px solid #00ffff !important;
+  
 }
 
 /* Ícones (font awesome) */
