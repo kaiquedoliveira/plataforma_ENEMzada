@@ -702,9 +702,6 @@ header {
   display: flex;
 }
 
-.h3 header {
-  color:white
-}
 .link-container input {
   flex-grow: 1;
   padding: 10px;
@@ -781,4 +778,8 @@ header {
 
 .acessibilidade {
 margin-right: 55px;
+}
+
+.h3 {
+  color: white;
 }
