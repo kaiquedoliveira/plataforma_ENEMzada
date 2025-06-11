@@ -109,15 +109,26 @@
     
     <div class="profile-content">
       <!-- Área da imagem e botão de upload -->
-      <div class="profile-image-area">
+    <div class="profile-image-area">
         <div class="image-preview">
-          <img src="placeholder.png" alt="Visualização da imagem">
+            <img id="image-preview" src="../images/user.jpg" alt="Visualização da imagem de perfil">
+            <div class="upload-progress" style="display: none;">
+                <div class="progress-bar"></div>
+                <span class="progress-text">0%</span>
+            </div>
         </div>
         <div class="upload-container">
-          <label for="file-upload" class="upload-button">Fazer upload de imagem</label>
-          <input id="file-upload" type="file" accept="image/*">
+            <label for="file-upload" class="upload-button">
+                <i class="fas fa-camera"></i> Alterar Foto
+            </label>
+            <input id="file-upload" type="file" accept="image/*">
         </div>
-      </div>
+        <div id="upload-success" class="thank-you-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Foto atualizada com sucesso!</h3>
+            <p>Sua nova foto de perfil foi salva.</p>
+        </div>
+    </div>
 
       <!-- Área das informações do perfil -->
       <form class="profile-info">
@@ -135,24 +146,36 @@
         <label for="telefone">Telefone:</label>
         <input type="tel" id="telefone" placeholder="(00) 00000-0000">
 
-         <label class="save-button">salvar</label>
+         <button type="submit" class="submit-btn">Salvar</button>
       </form>
+            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Alterações salvas!</h3>
+            <p>Suas alterações de perfil foram atualizadas com sucesso e agora refletem as novas configurações que você definiu.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script src="../js/notificacoes.js"></script>
-     <script src="../js/acessibilidade.js"></script>
+  </div>
      
-     <script>
+</div>
+
+
+
+<script src="../js/notificacoes.js"></script>
+<script src="../js/acessibilidade.js"></script>
+
+<script>
       document.getElementById("notificationBtn").addEventListener("click", function () {
-  const badge = document.getElementById("notificationBadge");
+        const badge = document.getElementById("notificationBadge");
   const notificationContent = document.getElementById("notificationContent");
 
 
   badge.style.display = "none";
-
-
+  
+  
   notificationContent.innerHTML = "<p>Você não tem novas notificações</p>";
-
+  
   
   const notificationContainer = document.getElementById("notificationContainer");
   notificationContainer.style.display = "block";
@@ -163,18 +186,19 @@ document.getElementById("close-notifications").addEventListener("click", functio
   const notificationContainer = document.getElementById("notificationContainer");
   notificationContainer.style.display = "none";
 });
-     </script>
+</script>
 
-         <!-- VLibras -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
+<!-- VLibras -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
   </div>
+</div>
 
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script src="../js/libras.js"></script>
-    
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script src="../js/libras.js"></script>
+<script src="../js/feedback.js"></script>>
+
 </body>
 </html>

@@ -121,6 +121,11 @@
 
                 <label class="save-button">Alterar Senha</label>
             </form>
+            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+    <i class="fas fa-check-circle"></i>
+    <h3>Senha alterada com sucesso!</h3>
+    <p>Sua senha foi atualizada com segurança. Na próxima vez que acessar, use a nova senha.</p>
+</div>
         </div>
     </div>
     <script src="../js/acessibilidade.js"></script>
@@ -157,5 +162,81 @@
 
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script src="../js/libras.js"></script>
+
+
+
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordForm = document.querySelector('.profile-info');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        
+        if (passwordForm && thankYouMessage) {
+            passwordForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validação básica das senhas
+                const currentPassword = document.getElementById('current-password').value;
+                const newPassword = document.getElementById('new-password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                
+                // Verificar se a nova senha e confirmação coincidem
+                if (newPassword !== confirmPassword) {
+                    alert('As senhas não coincidem!');
+                    return;
+                }
+                
+                // Verificar se a nova senha tem pelo menos 8 caracteres
+                if (newPassword.length < 8) {
+                    alert('A senha deve ter no mínimo 8 caracteres!');
+                    return;
+                }
+                
+                // Simular envio (substitua por código real de atualização)
+                console.log('Senha atualizada:', {
+                    currentPassword,
+                    newPassword
+                });
+                
+                // Esconder o formulário e mostrar mensagem de sucesso
+                passwordForm.style.display = 'none';
+                thankYouMessage.style.display = 'block';
+                
+                // Rolagem suave para a mensagem
+                thankYouMessage.scrollIntoView({ behavior: 'smooth' });
+                
+                // Limpar formulário
+                passwordForm.reset();
+            });
+            
+            // Configurar o botão "Alterar Senha" para submeter o formulário
+            const submitButton = document.querySelector('.save-button');
+            if (submitButton) {
+                submitButton.addEventListener('click', function() {
+                    passwordForm.dispatchEvent(new Event('submit'));
+                });
+            }
+        }
+        
+        // Manter a função de mostrar/esconder senha
+        document.querySelectorAll(".toggle-password").forEach(button => {
+            button.addEventListener("click", function() {
+                var passwordInput = this.previousElementSibling;
+                var icon = this.querySelector("i");
+                
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

@@ -659,3 +659,30 @@ header {
 .acessibilidade {
 margin-right: 55px;
 }
+/* Mensagem de agradecimento */
+.thank-you-message {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    display: none; /* Inicialmente escondido */
+}
+
+.thank-you-message i {
+    font-size: 60px;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+.thank-you-message h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.thank-you-message p {
+    color: #ddd;
+    margin-bottom: 0;
+    font-size: 16px;
+}
