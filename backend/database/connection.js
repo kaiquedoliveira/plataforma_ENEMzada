@@ -1,10 +1,12 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-  host: 'localhost', // Ou o IP do seu servidor de banco de dados
-  user: 'root', // Seu usuário do MySQL
-  password: 'Kaique@08', // Sua senha do MySQL, caso tenha
-  database: 'plataforma_Enem' // O nome do banco de dados que você criou
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'plataforma_Enem',
+  ssl: false,
+  port: 3306
 });
 
 connection.connect((err) => {

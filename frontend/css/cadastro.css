@@ -21,7 +21,7 @@
 
 html, body {
   height: 100%;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--light);
   line-height: 1.6;   
   background: var(--dark) url('../images/indexImagem.png') no-repeat center center;
@@ -39,12 +39,112 @@ body::before {
   z-index: -1;
 }
 
+/* Estilo para modo alto contraste */
+body.contraste,
+body.contraste * {
+  background-color: #000 !important;
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+/* Links com contraste */
+body.contraste a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+/* Botões */
+body.contraste button {
+  background-color: #111 !important;
+  color: #00ffff !important;
+  border: 1px solid #00ffff !important;
+}
+
+/* Ícones (font awesome) */
+body.contraste i {
+  color: #00ffff !important;
+}
+
+/* Borda das miniaturas */
+body.contraste img.thumbnail {
+  border: 2px solid #00ffff !important;
+}
+
+/* Ajustes para a sidebar */
+body.contraste .sidebar {
+  background-color: #000 !important;
+}
+
+/* Ajustes para a barra de acessibilidade */
+body.contraste .acessibilidade-menu,
+body.contraste .notification-container {
+  background-color: #111 !important;
+  color: #00ffff !important;
+}
+
+
 /* Header */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
+}
+.acessibilidade-menu {
+  box-shadow: 0 20px 20px rgba(81, 6, 124, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+   display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.fechar-btn {
+  align-self: flex-end;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+    color: #fff;
+}
+
+.fechar-btn:hover {
+  color: #000;
+}
+
+.titulo-acessibilidade {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.acessibilidade-menu button {
+  padding: 6px 10px;
+  font-size: 0.90rem;
+  cursor: pointer;
+  border: 1px solid #a40fc9;
+  background-color: #7a0b96;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.acessibilidade-menu button:hover {
+  background-color: #9e10c2;
+  transform: scale(1.02);
 }
 
 .navbar {
@@ -64,6 +164,7 @@ body::before {
   text-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
   transition: var(--transition);
   animation: glow 1.5s infinite alternate;
+  text-decoration: none;
 }
 
 .logo:hover {
@@ -119,14 +220,16 @@ body::before {
   display: flex;
   min-height: 100vh;
   padding-top: 80px;
+  
 }
 
 .register-form-container {
-  flex: 1;
+   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+ margin-left: -115px;
 }
 
 .form-content {
@@ -242,6 +345,7 @@ body::before {
   color: var(--gray);
   margin-bottom: 1rem;
   position: relative;
+  text-align: center;
 }
 
 .social-text::before,
@@ -292,41 +396,34 @@ body::before {
 }
 
 /* Image Container */
-.register-image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  justify-content: flex-start;
-}
-
-.image-content {
-  text-align: center;
-  max-width: 600px;
-  position: relative;
-  z-index: 1;
-}
 
 .image-title {
   font-size: 2rem;
   color: var(--light);
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+   margin-top: 200px;
+  margin-right: 90px;
 }
 
 .image-text {
   font-size: 1.2rem;
   color: var(--gray);
   margin-bottom: 2rem;
+  text-align: center;
+  margin-right: 90px;
+ 
 }
 
 .register-image {
-  width: 1000px;
+  width: 750px;
   height: auto;
   border-radius: 8px;
+  text-align: center;
+  margin-top: -35px;
+  margin-right: 80px;
+
 }
 
 /* Footer */
@@ -363,6 +460,7 @@ body::before {
   .register-container {
     flex-direction: column;
     padding-top: 70px;
+   
   }
   
   .register-image-container {
@@ -410,4 +508,33 @@ body::before {
   .image-title {
     font-size: 1.5rem;
   }
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Espaço para o ícone */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    color: #666;
 }

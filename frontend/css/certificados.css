@@ -1,105 +1,190 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- 
-.barra .active {
-    color: #590083;
- 
-}
- 
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f0f0f0;
     display: flex;
     height: 100vh;
 }
- 
+
+/* Estilo para modo alto contraste */
+body.contraste,
+body.contraste * {
+  background-color: #000 !important;
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+/* Links com contraste */
+body.contraste a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+/* Botões */
+body.contraste button {
+  background-color: #111 !important;
+  color: #00ffff !important;
+  border: 1px solid #00ffff !important;
+}
+
+/* Ícones (font awesome) */
+body.contraste i {
+  color: #00ffff !important;
+}
+
+/* Borda das miniaturas */
+body.contraste img.thumbnail {
+  border: 2px solid #00ffff !important;
+}
+
+/* Ajustes para a sidebar */
+body.contraste .sidebar {
+  background-color: #000 !important;
+}
+
+/* Ajustes para a barra de acessibilidade */
+body.contraste .acessibilidade-menu,
+body.contraste .notification-container {
+  background-color: #111 !important;
+  color: #00ffff !important;
+}
+
+
 /* Sidebar */
 .sidebar {
-    width: 350px;
-    background-color: #1b1b1b;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  width: 350px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
- 
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none;
+  color: white; /* ou a cor que você estiver usando */
+}
+
 .sidebar h1 {
-    text-align: center;
-    font-size: 160%;
-    margin-bottom: 70px;
+  text-align: center;
+  font-size: 160%;
+  margin-bottom: 70px;
 }
- 
+
+
+.sidebar nav ul a {
+  text-decoration: none;
+
+}
+
 .profile {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
- 
+
 .profile-pic img {
-    width: 110px;
-    height: 110px;
-    background-color: #555;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
+  width: 110px;
+  height: 110px;
+  background-color: #555;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
 }
- 
+
 .username {
-    font-weight: bold;
-    font-size: 90%;
-    margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 90%;
+  margin-bottom: 10px;
 }
- 
+
 .progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #373737;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 10px 0;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 8px;
+  background-color: #373737;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  margin-bottom: 30px;
 }
- 
+
 .progress {
-    width: 75%;
-    height: 100%;
-    background-color: #590083;
+  width: 5%;
+  height: 100%;
+  background-color: #590083;
 }
- 
+
 .progress-label {
-    margin-top: 30px;
-    font-size: 85%;
-    color: #d9d9d9;
-    display: flex;
+  margin-top: 30px;
+  font-size: 85%;
+  color: #d9d9d9;
+  display: flex;
 }
- 
+
 /* Navegação da Sidebar */
 nav ul {
-    list-style: none;
-    margin: 10px;
-    margin-top: 35px;
+  list-style: none;
+  margin: 10px;
+  margin-top: 35px;
 }
- 
+
 nav ul li {
-    margin: 17px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #d9d9d9;
+  margin: 17px;
+  font-weight: bold;
+  color: #d9d9d9;
 }
- 
+
 nav ul li a {
     text-decoration: none;
-    color: inherit;
-    display: flex;
+    color: inherit; 
     align-items: center;
+    margin-top: 10px;;
 }
- 
+
+.active {
+    color: #590083;
+}
+
 hr {
     opacity: 0.4;
     width: 300px;
 }
+
+
+.barra {
+    margin-top: auto;
+    font-size: smaller;
+}
  
+.barra li {
+    color: #737373;
+    font-weight: lighter;
+}
+ 
+.barra ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.space-icon{
+ padding-right: 25px;
+}
+
+.user-icon {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+
 /* Main Content */
 .main-content {
     flex: 5;
@@ -116,33 +201,68 @@ header {
     background: #1b1b1b;
     height: 83px;
 }
- 
-.user-icon {
-    padding: 10px 15px;
-    text-align: center;
-    font-size: 0.9em;
-    font-weight: bold;
+
+.acessibilidade-menu {
+  box-shadow: 0 20px 20px rgba(81, 6, 124, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+   display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.fechar-btn {
+  align-self: flex-end;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+    color: #fff;
+}
+
+.fechar-btn:hover {
+  color: #000;
+}
+
+.titulo-acessibilidade {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.acessibilidade-menu button {
+  padding: 6px 10px;
+  font-size: 0.90rem;
+  cursor: pointer;
+  border: 1px solid #a40fc9;
+  background-color: #7a0b96;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.acessibilidade-menu button:hover {
+  background-color: #9e10c2;
+  transform: scale(1.02);
 }
  
-.space-icon {
-   margin-right: 5px;
-}
+
+
  
-.barra {
-    margin-top: auto;
-    font-size: smaller;
-}
- 
-.barra li {
-    color: #737373;
-    font-weight: lighter;
-}
- 
-.barra ul li a {
-    text-decoration: none;
-    color: inherit;
-}
- 
+
 .texto {
     justify-items: left;
     margin-top: 10px;
@@ -154,6 +274,54 @@ header {
     margin-top: -49px;
     margin-bottom: 25px;
 }
+
+.acessibilidade-menu {
+    display: none;
+    background-color: #1b1b1b;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    z-index: 1000;
+}
+
+.acessibilidade {
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+}
+
+
+.notification-container {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #373737;
+}
+
+.notification-content {
+    padding: 10px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
  
 .search {
     display: flex;
@@ -161,9 +329,9 @@ header {
     justify-content: space-between;
     text-align: center;
 }
- 
+
 .search__input {
-    font-family: inherit;
+    font-family: 'Poppins', sans-serif;
     font-size: inherit;
     background-color: #373737;
     border: none;
@@ -174,36 +342,36 @@ header {
     transition: all ease-in-out .5s;
     margin-right: -2rem;
 }
- 
+
 .search__input:hover,
 .search__input:focus {
     box-shadow: 0 0 1em #00000013;
 }
- 
+
 .search__input:focus {
     outline: none;
     background-color: #373737;
 }
- 
+
 .search__input::-webkit-input-placeholder {
     font-weight: 100;
     color: #ccc;
 }
- 
+
 .search__input:focus+.search__button {
     background-color: #373737;
 }
- 
+
 .search__button {
     border: none;
     background-color: #373737;
     margin-top: .1em;
 }
- 
+
 .search__button:hover {
     cursor: pointer;
 }
- 
+
 .search__icon {
     height: 1.3em;
     width: 1.3em;
@@ -218,7 +386,7 @@ header {
   padding: 25px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  height: 822px;
+  height: 900px;
 }
 
 .content {
@@ -461,6 +629,7 @@ header {
   border: 1px solid #444;
 }
 
+
 .close-modal {
   position: absolute;
   top: 15px;
@@ -545,7 +714,7 @@ header {
 
 .copy-link {
   padding: 10px 15px;
-  background-color: #3498db;
+  background-color: #8e44ad;
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -559,7 +728,13 @@ header {
   background-color: #2980b9;
 }
 
-/* Responsividade */
+.title {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+
+/* Responsividade */ 
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
@@ -601,6 +776,10 @@ header {
   }
 }
 
- .active {
-  color: #590083;
+.acessibilidade {
+margin-right: 55px;
+}
+
+.h3 {
+  color: white;
 }

@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - ENEMzada</title>
+    <title>Enemzada-Meu-Perfil</title>
     <link rel="stylesheet" href="../css/perfil.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Sidebar -->
       <div class="sidebar">
     <h1>ENEMzada</h1>
     <div class="profile">
-      <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
-      <p class="username">Username</p>
+      <div class="profile-pic"> <img src="../images/user.jpg" /> </div>
+      <p class="username">Emerson</p>
       <div class="progress-label">
         <p>Seu progresso</p>
       </div>
@@ -22,52 +23,69 @@
         <div class="progress"></div>
       </div>
     </div>
-
-        <nav >
+         <nav>
             <ul>
-
-           <a href="home.html">
-        <li> <i class="fa-solid fa-house space-icon"> </i> Início </li>
-         </a>
-
+        <li><a href="home.html"> <i class="fa-solid fa-house space-icon"></i> Início</a></li>
+        <hr />        
+        <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i> Meu Perfil</a></li>
         <hr />
-        <li> <i class="fa-solid fa-user space-icon"> </i> Meu Perfil </li>
+        <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </a></li>  
         <hr />
-         <a href="certificados.html">
-             <li> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </li>
-            </a>
+        <li> <a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i> Cursos </a></li>
         <hr />
-        <a href="feedback.html">
-            <li> <i class="fa-solid fa-comment-dots space-icon"></i> Feedback </li>
-        </a>
-        <hr>
-        <a href="cursos.html">
-            <li> <i class="fa-solid fa-book space-icon"></i> Cursos </li>
-        </a>
-        <hr />
-      </ul>
+        </ul>
         </nav>
-
         <div class="barra">
-      <nav>
+        <nav>
         <ul>
-          <li>Suporte para Alunos</li>
-          <li>Termos de Uso / Políticas de Privacidade</li>
+           <li><a href="feedback.html">Feedback</a></li>
+           <li><a href="suporte2.html">Suporte para Alunos</a></li>
+           <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
         </ul>
       </nav>
     </div>
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <header>
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar matérias e aulas...">
-                <button><i class="fas fa-search"></i></button>
+  <div class="main-content">
+     <header>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Pesquisar matérias e aulas...">
+                <button class="search__button">
+                    <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
             </div>
-            <div class="user-actions">
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-universal-access"></i>
+
+            <div class="acessibilidade">
+             <i class="fa-solid fa-bell" id="notificationBtn"></i>
+             <span class="notification-badge" id="notificationBadge">1</span>
+            <i class="fa-solid fa-universal-access" id="acessibilidadeBtn"></i>
+           </div>
+
+            <!-- Menu de acessibilidade -->
+            <div class="acessibilidade-menu" id="menuAcessibilidade" aria-hidden="true" style="display: none;">
+                <button id="fecharAcessibilidade" class="fechar-btn" aria-label="Fechar menu acessibilidade">&times;</button>
+                <h2 class="titulo-acessibilidade">Acessibilidade</h2>
+                <hr>
+                <button onclick="alterarFonte('aumentar')">Aumentar Fonte</button>
+                <button onclick="alterarFonte('diminuir')">Diminuir Fonte</button>
+                <button onclick="alternarContraste()">Alto Contraste</button>
+            </div>
+
+            <!-- Notificações -->
+            <div class="notification-container" id="notificationContainer" style="display: none;">
+                <div class="notification-header">
+                    <h2>Notificações</h2>
+                    <button id="close-notifications" class="close-button">X</button>
+                </div>
+                <div class="notification-content">
+                    <p>Bem Vindo ao Enemzada</p>
+                </div>
             </div>
         </header>
 
@@ -75,8 +93,8 @@
 
             <div class="profile-header">
                 <div class="user-info">
-                    <h2>Meu Perfil</h2>
-                    <p>Apresente-se a Comunidade</p>
+                    <h2>Emerson</h2>
+                    <p>Bem Vindo ao seu futuro!</p>
 
                       <div class="profile-tabs">
                      <button class="active">Meu Perfil</button>
@@ -88,28 +106,34 @@
             </div>
     </div>
 
+    
     <div class="profile-content">
       <!-- Área da imagem e botão de upload -->
-      <div class="profile-image-area">
+    <div class="profile-image-area">
         <div class="image-preview">
-          <img src="placeholder.png" alt="Visualização da imagem">
+            <img id="image-preview" src="../images/user.jpg" alt="Visualização da imagem de perfil">
+            <div class="upload-progress" style="display: none;">
+                <div class="progress-bar"></div>
+                <span class="progress-text">0%</span>
+            </div>
         </div>
         <div class="upload-container">
-          <label for="file-upload" class="upload-button">Fazer upload de imagem</label>
-          <input id="file-upload" type="file" accept="image/*">
+            <label for="file-upload" class="upload-button">
+                <i class="fas fa-camera"></i> Alterar Foto
+            </label>
+            <input id="file-upload" type="file" accept="image/*">
         </div>
-      </div>
+        <div id="upload-success" class="thank-you-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Foto atualizada com sucesso!</h3>
+            <p>Sua nova foto de perfil foi salva.</p>
+        </div>
+    </div>
 
       <!-- Área das informações do perfil -->
       <form class="profile-info">
         <label for="nome_completo">Nome Completo:</label>
         <input type="text" id="nome_completo" placeholder="Digite seu nome">
-
-        <label for="email_principal">E-mail Principal:</label>
-        <input type="email" id="email_principal" placeholder="Digite seu e-mail">
-
-        <label for="data_nascimento">Data de Nascimento:</label>
-        <input type="date" id="data_nascimento">
 
         <label for="genero">Gênero:</label>
         <select id="genero">
@@ -122,12 +146,59 @@
         <label for="telefone">Telefone:</label>
         <input type="tel" id="telefone" placeholder="(00) 00000-0000">
 
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" placeholder="000.000.000-00">
-
-         <label class="save-button">salvar</label>
+         <button type="submit" class="submit-btn">Salvar</button>
       </form>
+            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Alterações salvas!</h3>
+            <p>Suas alterações de perfil foram atualizadas com sucesso e agora refletem as novas configurações que você definiu.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+     
+</div>
+
+
+
+<script src="../js/notificacoes.js"></script>
+<script src="../js/acessibilidade.js"></script>
+
+<script>
+      document.getElementById("notificationBtn").addEventListener("click", function () {
+        const badge = document.getElementById("notificationBadge");
+  const notificationContent = document.getElementById("notificationContent");
+
+
+  badge.style.display = "none";
+  
+  
+  notificationContent.innerHTML = "<p>Você não tem novas notificações</p>";
+  
+  
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "block";
+});
+
+
+document.getElementById("close-notifications").addEventListener("click", function () {
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "none";
+});
+</script>
+
+<!-- VLibras -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script src="../js/libras.js"></script>
+<script src="../js/feedback.js"></script>>
 
 </body>
 </html>

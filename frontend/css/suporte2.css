@@ -1,0 +1,496 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.barra {
+    margin-top: auto;
+    font-size: smaller;
+}
+
+.barra li {
+    color: #737373;
+    font-weight: lighter;
+}
+
+.barra ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  height: 100vh;
+}
+
+/* Estilo para modo alto contraste */
+body.contraste,
+body.contraste * {
+  background-color: #000 !important;
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+/* Links com contraste */
+body.contraste a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+/* Botões */
+body.contraste button {
+  background-color: #111 !important;
+  color: #00ffff !important;
+  border: 1px solid #00ffff !important;
+}
+
+/* Ícones (font awesome) */
+body.contraste i {
+  color: #00ffff !important;
+}
+
+/* Borda das miniaturas */
+body.contraste img.thumbnail {
+  border: 2px solid #00ffff !important;
+}
+
+/* Ajustes para a sidebar */
+body.contraste .sidebar {
+  background-color: #000 !important;
+}
+
+/* Ajustes para a barra de acessibilidade */
+body.contraste .acessibilidade-menu,
+body.contraste .notification-container {
+  background-color: #111 !important;
+  color: #00ffff !important;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 350px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none;
+  color: white; /* ou a cor que você estiver usando */
+}
+
+
+.sidebar h1 {
+  text-align: center;
+  font-size: 160%;
+  margin-bottom: 70px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-pic img {
+  width: 110px;
+  height: 110px;
+  background-color: #555;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 90%;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #373737;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+
+.progress {
+  width: 5%;
+  height: 100%;
+  background-color: #590083;
+}
+
+.progress-label {
+  margin-top: 30px;
+  font-size: 85%;
+  color: #d9d9d9;
+  display: flex;
+}
+
+/* Navegação da Sidebar */
+nav ul {
+  list-style: none;
+  margin: 10px;
+  margin-top: 34px;
+}
+
+nav ul li {
+  margin: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+hr {
+  opacity: 0.4;
+  width: 300px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 5;
+  background-color: black;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.content {
+  flex: 5;
+  background-color: rgb(36, 34, 34);
+  color: #fffafa;
+  overflow-y: auto;
+  padding: 2rem;
+  max-width: 1500px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background: #1b1b1b;
+  height: 83px;
+}
+
+.acessibilidade-menu {
+  box-shadow: 0 20px 20px rgba(81, 6, 124, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+   display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.fechar-btn {
+  align-self: flex-end;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+    color: #fff;
+}
+
+.fechar-btn:hover {
+  color: #000;
+}
+
+.titulo-acessibilidade {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.acessibilidade-menu button {
+  padding: 6px 10px;
+  font-size: 0.90rem;
+  cursor: pointer;
+  border: 1px solid #a40fc9;
+  background-color: #7a0b96;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.acessibilidade-menu button:hover {
+  background-color: #9e10c2;
+  transform: scale(1.02);
+}
+
+.user-icon {
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.space-icon {
+  padding-right: 25px;
+}
+
+.barra {
+  margin-top: auto;
+  font-size: smaller;
+}
+
+.barra li {
+  color: #737373;
+  font-weight: lighter;
+}
+
+.texto {
+  justify-items: left;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.botao {
+  justify-self: right;
+  margin-top: -49px;
+  margin-bottom: 25px;
+}
+
+.notification-container {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #373737;
+}
+
+.notification-content {
+    padding: 10px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.search__input {
+  font-family: 'Poppins', sans-serif;
+  font-size: inherit;
+  background-color: #373737;
+  border: none;
+  color: #f0f0f0;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 34em;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #373737;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus+.search__button {
+  background-color: #373737;
+}
+
+.search__button {
+  border: none;
+  background-color: #373737;
+  margin-top: .1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+/* css do chat */
+.chat-container {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  flex-direction: column;
+  height: 500px;
+}
+
+.chat-header {
+  background-color: #590083;
+  color: white;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #323232;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #e3f2fd;
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+}
+
+.support-message {
+  background-color: #686565;
+  margin-right: auto;
+  border-bottom-left-radius: 0;
+  color: #fff;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #686565;
+  background-color: #373737;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #5f5e5e;
+  border-radius: 20px;
+  outline: none;
+  background-color: #2e2d2d;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #929191;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(113, 69, 155);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+
+.chat-toggle i {
+  font-size: 24px;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: #777;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.support-typing {
+  font-size: 12px;
+  color: #777;
+  padding: 0 15px 10px;
+  font-style: italic;
+  display: none;
+}
+
+.acessibilidade {
+margin-right: 55px;
+}

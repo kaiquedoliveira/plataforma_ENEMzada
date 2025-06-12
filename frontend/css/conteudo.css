@@ -4,16 +4,55 @@
     box-sizing: border-box;
 }
 
-.barra .active {
-    color: #590083;
-
-}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f0f0f0;
     display: flex;
     height: 100vh;
+}
+
+/* Estilo para modo alto contraste */
+body.contraste,
+body.contraste * {
+  background-color: #000 !important;
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+/* Links com contraste */
+body.contraste a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+/* Botões */
+body.contraste button {
+  background-color: #111 !important;
+  color: #00ffff !important;
+  border: 1px solid #00ffff !important;
+}
+
+/* Ícones (font awesome) */
+body.contraste i {
+  color: #00ffff !important;
+}
+
+/* Borda das miniaturas */
+body.contraste img.thumbnail {
+  border: 2px solid #00ffff !important;
+}
+
+/* Ajustes para a sidebar */
+body.contraste .sidebar {
+  background-color: #000 !important;
+}
+
+/* Ajustes para a barra de acessibilidade */
+body.contraste .acessibilidade-menu,
+body.contraste .notification-container {
+  background-color: #111 !important;
+  color: #00ffff !important;
 }
 
 /* Sidebar */
@@ -25,6 +64,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none;
+  color: white; /* ou a cor que você estiver usando */
+}
+
 
 .sidebar h1 {
     text-align: center;
@@ -62,7 +109,7 @@ body {
 }
 
 .progress {
-    width: 75%;
+    width: 5%;
     height: 100%;
     background-color: #590083;
 }
@@ -78,11 +125,11 @@ body {
 nav ul {
     list-style: none;
     margin: 10px;
+    margin-top: 34px;
 }
 
 nav ul li {
     margin: 17px;
-    cursor: pointer;
     font-weight: bold;
     color: #d9d9d9;
 }
@@ -114,6 +161,62 @@ header {
     margin-bottom: 20px;
     background: #1b1b1b;
     height: 83px;
+}
+.acessibilidade-menu {
+  box-shadow: 0 20px 20px rgba(81, 6, 124, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+   display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.fechar-btn {
+  align-self: flex-end;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+    color: #fff;
+}
+
+.fechar-btn:hover {
+  color: #000;
+}
+
+.titulo-acessibilidade {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.acessibilidade-menu button {
+  padding: 6px 10px;
+  font-size: 0.90rem;
+  cursor: pointer;
+  border: 1px solid #a40fc9;
+  background-color: #7a0b96;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.acessibilidade-menu button:hover {
+  background-color: #9e10c2;
+  transform: scale(1.02);
 }
 
 .user-icon {
@@ -154,6 +257,37 @@ header {
     margin-bottom: 25px;
 }
 
+.notification-container {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #373737;
+}
+
+.notification-content {
+    padding: 10px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
 .search {
     display: flex;
     align-items: center;
@@ -162,7 +296,7 @@ header {
 }
 
 .search__input {
-    font-family: inherit;
+    font-family: 'Poppins', sans-serif;
     font-size: inherit;
     background-color: #373737;
     border: none;
@@ -258,4 +392,14 @@ header {
 
 .header-arrow-text a{
     color: #d9d9d9;
+}
+
+.thumbnail {
+    max-width: 260px;
+    height: auto;
+    object-fit: cover;
+}
+
+.acessibilidade {
+margin-right: 55px;
 }

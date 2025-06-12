@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enemzada-Linguagens</title>
+    <link rel="stylesheet" href="../css/matematica.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>ENEMzada</h1>
+        <div class="profile">
+            <div class="profile-pic"> <img src="../images/user.jpg" /> </div>
+            <p class="username">Emerson</p>
+            <div class="progress-label">
+                <p>Seu progresso</p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+         <nav>
+            <ul>
+        <li><a href="home.html"> <i class="fa-solid fa-house space-icon"></i> Início</a></li>
+        <hr />        
+        <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i> Meu Perfil</a></li>
+        <hr />
+        <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </a></li>  
+        <hr />
+        <li> <a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i> Cursos </a></li>
+        <hr />
+        </ul>
+        </nav>
+        <div class="barra">
+            <nav>
+                <ul>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="suporte.html">Suporte para Alunos</a></li>
+                    <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Pesquisar matérias e aulas...">
+                <button class="search__button">
+                    <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="acessibilidade">
+                <i class="fa-solid fa-bell" id="notificationBtn"></i>
+                <i class="fa-solid fa-universal-access" id="acessibilidadeBtn"></i>
+            </div>
+
+            <!-- Menu de acessibilidade -->
+            <div class="acessibilidade-menu" id="menuAcessibilidade" aria-hidden="true" style="display: none;">
+                <button id="fecharAcessibilidade" class="fechar-btn" aria-label="Fechar menu acessibilidade">&times;</button>
+                <h2 class="titulo-acessibilidade">Acessibilidade</h2>
+                <hr>
+                <button onclick="alterarFonte('aumentar')">Aumentar Fonte</button>
+                <button onclick="alterarFonte('diminuir')">Diminuir Fonte</button>
+                <button onclick="alternarContraste()">Alto Contraste</button>
+            </div>
+
+            <!-- Notificações -->
+            <div class="notification-container" id="notificationContainer" style="display: none;">
+                <div class="notification-header">
+                    <h2>Notificações</h2>
+                    <button id="close-notifications" class="close-button">X</button>
+                </div>
+                <div class="notification-content">
+                    <p>Você não tem novas notificações</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="terms-content">
+                <div class="container">
+                    <div class="header-arrow-text">
+                        <a href="cursos.html">
+                            <i class="fa-solid fa-chevron-left fa-lg"></i>
+                        </a>
+                        <h1>Leitura, compreensão e análise textual</h1>
+                    </div>
+
+                    <p class="subtitle">Explore os principais temas para se preparar e obter um excelente desempenho na compreensão e análise de textos!</p>
+
+                    <div class="topic-container">
+                        <div class="resources-grid">
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(138, 79, 255, 0.1);">
+                                    <span class="icon">1</span>
+                                </div>
+                                    <h3 class="card-title">Interpretação de Texto</h3>
+                                    <p class="card-description">Desenvolva sua habilidade de entender o que o texto realmente quer dizer, analisando ideias principais, inferências e intenções do autor.</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(26, 188, 156, 0.1);">
+                                    <span class="icon">2</span>
+                                </div>
+                                <h3 class="card-title">Gêneros Textuais</h3>
+                                <p class="card-description">Identifique e compreenda diferentes tipos de texto, como tirinhas, crônicas, notícias e propagandas, e saiba como cada um se comunica.</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(231, 76, 60, 0.1);">
+                                    <span class="icon">3</span>
+                                </div>
+                                <h3 class="card-title">Figuras de Linguagem</h3>
+                                <p class="card-description">Descubra os efeitos criativos da linguagem com metáforas, ironias, hipérboles e muito mais para interpretar mensagens com profundidade.</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(52, 152, 219, 0.1);">
+                                    <span class="icon">4</span>
+                                </div>
+                                <a href="conteudo-2.html" class="card-link">
+                                    <h3 class="card-title">Funções da Linguagem</h3>
+                                </a>
+
+                                <p class="card-description">Aprenda a reconhecer a intenção da comunicação - se o texto informa, emociona, covence, entre outras finalidades.</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(243, 156, 18, 0.1);">
+                                    <span class="icon">5</span>
+                                </div>
+                                <h3 class="card-title">Variação Linguística</h3>
+                                <p class="card-description">Entenda como a linguagem muda de acordo com a região, grupo social ou situação, e como isso é tratado na norma culta e no ENEM.</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(155, 89, 182, 0.1);">
+                                    <span class="icon">6</span>
+                                </div>
+                                <h3 class="card-title">Coesão e Coerência Textual</h3>
+                                <p class="card-description">Domine os elementos que tornam um texto bem estruturado e lógico, como conectivos, pronomes e organização das ideias.</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(138, 79, 255, 0.1);">
+                                    <span class="icon">7</span>
+                                </div>
+                                <h3 class="card-title">Literatura</h3>
+                                <p class="card-description">Explore os movimentos literários, seus principais autores e estilos, além de entender como a literatura dialoga com a realidade.
+
+</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(231, 76, 60, 0.1);">
+                                    <span class="icon">8</span>
+                                </div>
+                                <h3 class="card-title">Gramática no Texto</h3>
+                                <p class="card-description">Aprenda regras de pontuação, crase, concordância, regência e colocação pronominal aplicadas de forma contextualizada..</p>
+                            </div>
+
+                            <div class="resource-card">
+                                <div class="card-icon" style="background-color: rgba(26, 188, 156, 0.1);">
+                                    <span class="icon">9</span>
+                                </div>
+                                <h3 class="card-title">Simulado</h3>
+                                <p class="card-description">Pratique com simulados de provas anteriores e questões inéditas para treinar seu foco, tempo e estratégias de resolução.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="../js/libras.js"></script>
+    <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
+    <script src="../js/notificacoes.js"></script>
+    <script src="../js/acessibilidade.js"></script>
+</body>
+
+</html>

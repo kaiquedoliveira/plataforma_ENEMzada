@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enemzada - Termos de Uso e Política de Privacidade</title>
+    <title>Enemzada-Matematica</title>
     <link rel="stylesheet" href="../css/matematica.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -14,8 +17,8 @@
     <div class="sidebar">
         <h1>ENEMzada</h1>
         <div class="profile">
-            <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
-            <p class="username">Username</p>
+            <div class="profile-pic"> <img src="../images/user.jpg" /> </div>
+            <p class="username">Emerson</p>
             <div class="progress-label">
                 <p>Seu progresso</p>
             </div>
@@ -23,16 +26,17 @@
                 <div class="progress"></div>
             </div>
         </div>
-        <nav>
+          <nav>
             <ul>
-                <li> <a href="cursos.html"> <i class="fa-solid fa-house space-icon"></i>Início</a></li>
-                <hr />
-                <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i>Minha Conta</a></li>
-                <hr />
-                <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i>Central de
-                        Certificados</a></li>
-                <hr />
-            </ul>
+        <li><a href="home.html"> <i class="fa-solid fa-house space-icon"></i> Início</a></li>
+        <hr />        
+        <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i> Meu Perfil</a></li>
+        <hr />
+        <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </a></li>  
+        <hr />
+        <li> <a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i> Cursos </a></li>
+        <hr />
+        </ul>
         </nav>
         <div class="barra">
             <nav>
@@ -48,28 +52,57 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <header>
-            <div class="search"> <input type="text" class="search__input" placeholder="Pesquisar matérias e aulas...">
-                <button class="search__button"> <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+         <header>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Pesquisar matérias e aulas...">
+                <button class="search__button">
+                    <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
                         <g>
-                            <path
-                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
                             </path>
                         </g>
-                    </svg> </button> </div>
-            <div class="acessibilidade"
-                style=" display: flex; align-items: center; justify-content: space-between; width: 4%; margin-right: 50px; ">
-                <i class="fa-solid fa-bell"></i>
-                <i class="fa-solid fa-universal-access"></i>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="acessibilidade">
+                <i class="fa-solid fa-bell" id="notificationBtn"></i>
+                <i class="fa-solid fa-universal-access" id="acessibilidadeBtn"></i>
+            </div>
+
+            <!-- Menu de acessibilidade -->
+            <div class="acessibilidade-menu" id="menuAcessibilidade" aria-hidden="true" style="display: none;">
+                <button id="fecharAcessibilidade" class="fechar-btn" aria-label="Fechar menu acessibilidade">&times;</button>
+                <h2 class="titulo-acessibilidade">Acessibilidade</h2>
+                <hr>
+                <button onclick="alterarFonte('aumentar')">Aumentar Fonte</button>
+                <button onclick="alterarFonte('diminuir')">Diminuir Fonte</button>
+                <button onclick="alternarContraste()">Alto Contraste</button>
+            </div>
+
+            <!-- Notificações -->
+            <div class="notification-container" id="notificationContainer" style="display: none;">
+                <div class="notification-header">
+                    <h2>Notificações</h2>
+                    <button id="close-notifications" class="close-button">X</button>
+                </div>
+                <div class="notification-content">
+                    <p>Você não tem novas notificações</p>
+                </div>
             </div>
         </header>
-
         <div class="content">
             <div class="terms-content">
                 <div class="container">
-                    <h1>Operações com números inteiros, frações e decimais</h1>
-                    <p class="subtitle">Explore os principais temas para se preparar e obter um excelente desempenho no
-                        assunto!</p>
+                    <div class="header-arrow-text">
+         <a href="cursos.html">
+             <i class="fa-solid fa-chevron-left fa-lg"></i>
+            </a>
+         <h1>Aprenda Razão e Proporção </h1>
+        </div>
+              
+            <p>Operações com números inteiros, frações e decimais</p>
+ 
 
                     <div class="topic-container">
                         <div class="resources-grid">
@@ -81,7 +114,7 @@
                                 <a href="conteudo-1.html" class="card-link">
                                     <h3 class="card-title">Razão e proporção</h3>
                                 </a>
-                                
+
                                 <p class="card-description">Compreenda a relação entre grandezas e sua aplicação em
                                     problemas cotidianos.</p>
                             </div>
@@ -165,7 +198,19 @@
         </div>
     </div>
 
+        <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="../js/libras.js"></script>
     <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
+    <script src="../js/notificacoes.js"></script>
+    <script src="../js/acessibilidade.js"></script>
 </body>
 
 </html>

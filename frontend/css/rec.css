@@ -20,12 +20,57 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
   color: var(--light);
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+
+/* Estilo para modo alto contraste */
+body.contraste,
+body.contraste * {
+  background-color: #000 !important;
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+/* Links com contraste */
+body.contraste a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+/* Botões */
+body.contraste button {
+  background-color: #111 !important;
+  color: #00ffff !important;
+  border: 1px solid #00ffff !important;
+}
+
+/* Ícones (font awesome) */
+body.contraste i {
+  color: #00ffff !important;
+}
+
+/* Borda das miniaturas */
+body.contraste img.thumbnail {
+  border: 2px solid #00ffff !important;
+}
+
+/* Ajustes para a sidebar */
+body.contraste .sidebar {
+  background-color: #000 !important;
+}
+
+/* Ajustes para a barra de acessibilidade */
+body.contraste .acessibilidade-menu,
+body.contraste .notification-container {
+  background-color: #111 !important;
+  color: #00ffff !important;
+}
+
 
 /* Tipografia */
 h1, h2, h3, h4 {
@@ -46,6 +91,63 @@ p {
   z-index: 100;
 }
 
+.acessibilidade-menu {
+  box-shadow: 0 20px 20px rgba(81, 6, 124, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+   display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 300px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.fechar-btn {
+  align-self: flex-end;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: none;
+    color: #fff;
+}
+
+.fechar-btn:hover {
+  color: #000;
+}
+
+.titulo-acessibilidade {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.acessibilidade-menu button {
+  padding: 6px 10px;
+  font-size: 0.90rem;
+  cursor: pointer;
+  border: 1px solid #a40fc9;
+  background-color: #7a0b96;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.acessibilidade-menu button:hover {
+  background-color: #9e10c2;
+  transform: scale(1.02);
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -62,17 +164,20 @@ p {
   color: var(--light);
   text-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
   transition: var(--transition);
+  animation: glow 1.5s infinite alternate;
+  text-decoration: none;
 }
 
-.logo:hover {
-  text-shadow: 0 0 15px rgba(138, 79, 255, 0.8);
+.logo:hover{
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
 }
 
+ 
 .nav-links {
   display: flex;
   gap: 1.5rem;
 }
-
+ 
 .nav-link {
   color: var(--light);
   text-decoration: none;
@@ -81,11 +186,11 @@ p {
   padding: 0.5rem 0;
   transition: var(--transition);
 }
-
+ 
 .nav-link.effect-1:hover {
   color: var(--primary);
 }
-
+ 
 .nav-link.effect-1::after {
   content: '';
   position: absolute;
@@ -96,19 +201,20 @@ p {
   background-color: var(--primary);
   transition: var(--transition);
 }
-
+ 
 .nav-link.effect-1:hover::after {
   width: 100%;
 }
-
+ 
 .nav-link.active {
   color: var(--primary);
   font-weight: 600;
 }
-
+ 
 .nav-link.active::after {
   width: 100%;
 }
+ 
 
 /* Hero Section */
 .hero {
@@ -120,7 +226,14 @@ p {
   position: relative;
   overflow: hidden;
   margin-top: 60px;
-  background: linear-gradient(135deg, rgba(138, 79, 255, 0.2), rgba(26, 188, 156, 0.2));
+  background-image: 
+    linear-gradient(135deg, rgba(138, 79, 255, 0.2), rgba(26, 188, 156, 0.2)),
+    url('../images/recursoss.jpg'); /* <-- substitua pelo caminho correto */
+  background-size: cover;
+   background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2%;
+  
 }
 
 .hero-content {
@@ -129,21 +242,24 @@ p {
   padding: 0 1.5rem;
   max-width: 800px;
   margin: 0 auto;
+  
 }
 
 .hero-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: var(--light);
-  text-shadow: 0 0 15px rgba(138, 79, 255, 0.5);
-  animation: fadeIn 1s ease-out;
+   color: var(--light);
+  text-shadow: 0 0 10px rgba(48, 7, 102, 0.5);
+  transition: var(--transition);
+  animation: glow 6.5s infinite alternate;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: var(--gray);
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease-out 0.2s both;
+   color: var(--light);
+  text-shadow: 0 0 10px rgba(48, 7, 102, 0.5);
+  transition: var(--transition);
+  animation: glow 6.5s infinite alternate;
 }
 
 .hero-wave {
@@ -161,6 +277,7 @@ p {
 /* Sections */
 .main-content {
   padding-bottom: 4rem;
+  
 }
 
 .section-intro {
@@ -168,6 +285,7 @@ p {
   max-width: 800px;
   margin: 0 auto 3rem;
   padding: 0 1.5rem;
+  
 }
 
 .section-title {
@@ -337,13 +455,13 @@ p {
   font-size: 1rem;
 }
 
-/* Footer */
 .footer {
   text-align: center;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+ 
+  color: white;
 }
+
 
 .footer-text {
   font-size: 0.9rem;
@@ -351,6 +469,21 @@ p {
 }
 
 /* Animations */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(200, 163, 207, 0.5), 
+                 0 0 10px rgba(72, 30, 128, 0.5), 
+                 0 0 15px rgba(231, 231, 231, 0.3), 
+                 0 0 20px rgba(70, 16, 158, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(200, 163, 207, 0.8), 
+                 0 0 20px rgba(72, 30, 128, 0.8), 
+                 0 0 30px rgba(231, 231, 231, 0.5), 
+                 0 0 40px rgba(70, 16, 158, 0.8);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -372,45 +505,48 @@ p {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .nav {
-    padding: 1rem;
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.8rem;
   }
   
-  .nav-links {
-    gap: 1rem;
+  .team-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
   }
   
   .hero-title {
     font-size: 2.2rem;
   }
   
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-  
   .section-title {
     font-size: 2rem;
   }
   
-  .resources-grid {
-    grid-template-columns: 1fr;
+  .about-content {
+    padding: 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  .nav {
-    flex-direction: column;
+@media (max-width: 576px) {
+  .nav-links {
     gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .hero {
-    height: 50vh;
-    margin-top: 100px;
   }
   
   .hero-title {
     font-size: 1.8rem;
+  }
+  
+  .team-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
   }
 }

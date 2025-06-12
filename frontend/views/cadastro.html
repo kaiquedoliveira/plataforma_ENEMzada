@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - ENEMzada</title>
+  <title>Enemzada-Cadastro</title>
   <link rel="stylesheet" href="../css/cadastro.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,11 +13,14 @@
   <!-- Navbar -->
   <header class="header">
     <nav class="navbar">
-      <div class="logo">ENEMzada</div>
+        <div class="button-logo">
+            <a href="../index.html" class="logo">ENEMzada</a>
+        </div>
       <div class="nav-links">
         <a href="../index.html" class="nav-link effect-1">Início</a>
-        <a href="#" class="nav-link effect-1">Planos</a>
         <a href="../views/rec.html" class="nav-link effect-1">Recursos</a>
+        <a href="../views/quemsomos.html" class="nav-link effect-1">Quem somos</a>
+
       </div>
     </nav>
   </header>
@@ -25,7 +29,7 @@
   <main class="register-container">
     <div class="register-form-container">
       <div class="form-content">
-        <h2 class="form-title">CADASTRE-SE</h2>
+        <h2 class="form-title">Junte-se a nós!</h2>
         <form id="register-form" class="form">
           <div class="form-group">
             <label for="nome" class="form-label">Nome</label>
@@ -36,12 +40,32 @@
             <label for="email" class="form-label">E-mail</label>
             <input type="email" id="email" name="email" class="form-input" required>
           </div>
-          
-          <div class="form-group">
-            <label for="senha" class="form-label">Senha</label>
-            <input type="password" id="senha" name="senha" class="form-input" required>
+
+           <div class="form-group">
+            <label for="senha" class="form-label">Senha:</label>
+            <div class="password-container">
+              <input type="password" id="senha" name="senha" class="form-input" autocomplete="current-password" required>
+              <button type="button" id="toggle-password" class="toggle-password">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
             <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
           </div>
+
+         <!-- CAMPO CONFIRMAR SENHA -->
+        <div class="form-group">
+          <label for="confirmarSenha" class="form-label">Confirmar senha:</label>
+             <div class="password-container">
+               <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-input" autocomplete="current-password" required>
+               <button type="button" class="toggle-password">
+           <i class="fa fa-eye"></i>
+               </button>
+           </div>
+           <p class="password-info">Confirme sua senha de acesso</p>
+          </div>
+
+
+
 
           <div class="form-footer">
             <p class="login-link">
@@ -55,13 +79,13 @@
             <p class="social-text">Ou cadastre-se com:</p>
             <div class="social-icons">
               <a href="https://www.instagram.com/" class="social-icon">
-                <img src="../images/logoinsta.png" alt="Instagram">
+                <img src="../images/instagram.png" alt="Instagram">
               </a>
               <a href="https://www.google.com/intl/pt-BR/account/about/" class="social-icon">
-                <img src="../images/googlelogo.png" alt="Google">
+                <img src="../images/google.png" alt="Google">
               </a>
               <a href="https://br.linkedin.com/" class="social-icon">
-                <img src="../images/linkedinimg.png" alt="LinkedIn">
+                <img src="../images/linkedin.png" alt="LinkedIn">
               </a>
             </div>
           </div>
@@ -77,6 +101,33 @@
       </div>
 
 
+  <script>
+    document.getElementById("toggle-password").addEventListener("click", function() {
+        var senhaInput = document.getElementById("senha");
+        var icon = this.querySelector("i");
+
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            senhaInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    });
+  </script>
+
+      <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="../js/libras.js"></script> 
   <script src="../js/app.js"></script>
 
 </body>

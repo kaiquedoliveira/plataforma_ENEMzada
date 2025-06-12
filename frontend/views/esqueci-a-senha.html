@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - ENEMzada</title>
+  <link rel="stylesheet" href="../css/cadastro.css">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar">       
+      <div class="logo">ENEMzada</div>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link effect-1">Início</a>
+        <a href="../views/rec.html" class="nav-link effect-1">Recursos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Layout Principal -->
+  <main class="register-container">
+    <div class="register-form-container">
+      <div class="form-content">
+        <h2 class="form-title">Esqueci a Senha</h2>
+        <form id="register-form" class="form">
+          <div class="form-group">
+            <label for="nome" class="form-label">Email</label>
+            <input type="text" id="nome" name="nome" class="form-input" required>
+          </div>
+          
+           <div class="form-group">
+            <label for="senha" class="form-label">Nova Senha:</label>
+            <div class="password-container">
+              <input type="password" id="senha" name="senha" class="form-input" autocomplete="current-password" required>
+              <button type="button" id="toggle-password" class="toggle-password">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+             <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
+
+           <div class="form-group">
+            <label for="senha" class="form-label">Confirmar Senha:</label>
+            <div class="password-container">
+              <input type="password" id="senha" name="senha" class="form-input" autocomplete="current-password" required>
+              <button type="button" id="toggle-password" class="toggle-password">
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+            <p class="password-info">Crie uma senha de acesso, com 8 letras e/ou números</p>
+            
+          </div>
+
+          <div class="form-footer">
+            <p class="login-link">
+              <a href="./login.html">Já tenho conta</a>
+            </p>
+          </div>
+          <button type="submit" class="form-button">Alterar Senha</button>
+
+  
+        </form>
+      </div>
+    </div>
+
+  <script>
+    document.getElementById("toggle-password").addEventListener("click", function() {
+        var senhaInput = document.getElementById("senha");
+        var icon = this.querySelector("i");
+
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            senhaInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    });
+  </script>
+
+      <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="../js/libras.js"></script>
+
+</body>
+</html>
+
+ 

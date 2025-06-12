@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ENEMzada - Central de Certificados</title>
+  <title>ENEMzada -Central-de-Certificados</title>
   <link rel="stylesheet" href="../css/certificados.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+</head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h1>ENEMzada</h1>
-    <div class="profile">
-      <div class="profile-pic"> <img src="../images/foto-user.jpg" /> </div>
-      <p class="username">Username</p>
+  
+ <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+      <h1>ENEMzada</h1>
+              </div>
+      <div class="profile">
+      <div class="profile-pic"> <img src="../images/user.jpg" /> </div>
+      <p class="username">Emerson</p>
       <div class="progress-label">
         <p>Seu progresso</p>
       </div>
@@ -23,47 +26,71 @@
         <div class="progress"></div>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li> <a href="home.html"> <i class="fa-solid fa-house space-icon"></i>Início</a></li>
+         <nav>
+            <ul>
+        <li><a href="home.html"> <i class="fa-solid fa-house space-icon"></i> Início</a></li>
+        <hr />        
+        <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i> Meu Perfil</a></li>
         <hr />
-        <li><a href="perfil.html"> <i class="fa-solid fa-user space-icon"></i>Meu Perfil</a></li>
+        <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i> Central de Certificados </a></li>  
         <hr />
-        <li><a href="certificados.html"> <i class="fa-solid fa-graduation-cap space-icon"></i>Central de Certificados</a></li>
+        <li> <a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i> Cursos </a></li>
         <hr />
-        <li><a href="feedback.html"> <i class="fa-solid fa-comment-dots space-icon"></i>Feedback</a></li>
-        <hr />
-        <li><a href="cursos.html"> <i class="fa-solid fa-book space-icon"></i>Cursos</a></li>
-        <hr />
-      </ul>
-    </nav>
-    <div class="barra">
+        </ul>
+        </nav>
+        <div class="barra">
       <nav>
         <ul>
-          <li><a href="suporte.html">Suporte para Alunos</a></li>
-          <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
+           <li><a href="feedback.html">Feedback</a></li>
+           <li><a href="suporte2.html">Suporte para Alunos</a></li>
+           <li><a href="politicas_termos.html">Termos de Uso / Políticas de Privacidade</a></li>
         </ul>
       </nav>
     </div>
-  </div>
+    </div>
   
   <!-- Main Content -->
   <div class="main-content">
-    <header>
-      <div class="search"> <input type="text" class="search__input" placeholder="Pesquisar certificados..."> <button
-          class="search__button"> <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-            <g>
-              <path
-                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
-              </path>
-            </g>
-          </svg> </button> </div>
-      <div class="acessibilidade"
-        style=" display: flex; align-items: center; justify-content: space-between; width: 4%; margin-right: 50px; ">
-        <i class="fa-solid fa-bell"></i>
-        <i class="fa-solid fa-universal-access"></i>
-      </div>
-    </header>
+         <header>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Pesquisar matérias e aulas...">
+                <button class="search__button">
+                    <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+             <div class="acessibilidade">
+             <i class="fa-solid fa-bell" id="notificationBtn"></i>
+             <span class="notification-badge" id="notificationBadge">1</span>
+            <i class="fa-solid fa-universal-access" id="acessibilidadeBtn"></i>
+           </div> 
+
+
+            <!-- Menu de acessibilidade -->
+            <div class="acessibilidade-menu" id="menuAcessibilidade" aria-hidden="true" style="display: none;">
+                <button id="fecharAcessibilidade" class="fechar-btn" aria-label="Fechar menu acessibilidade">&times;</button>
+                <h2 class="titulo-acessibilidade">Acessibilidade</h2>
+                <hr>
+                <button onclick="alterarFonte('aumentar')">Aumentar Fonte</button>
+                <button onclick="alterarFonte('diminuir')">Diminuir Fonte</button>
+                <button onclick="alternarContraste()">Alto Contraste</button>
+            </div>
+
+            <!-- Notificações -->
+            <div class="notification-container" id="notificationContainer" style="display: none;">
+                <div class="notification-header">
+                    <h2>Notificações</h2>
+                    <button id="close-notifications" class="close-button">X</button>
+                </div>
+                <div class="notification-content">
+                    <p>Bem Vindo ao Enemzada</p>
+                </div>
+        </header>
     
     <div class="content">
       <div class="contents">
@@ -71,8 +98,6 @@
         
         <div class="certificate-filters">
           <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="completed">Concluídos</button>
-          <button class="filter-btn" data-filter="progress">Em Progresso</button>
         </div>
         
         <div class="certificate-container">
@@ -80,13 +105,13 @@
           <div class="certificate-card completed" data-course="matematica">
             <div class="certificate-header">
               <h3>Matemática Básica</h3>
-              <span class="certificate-status completed">Concluído</span>
+              <span class="certificate-status completed">Concluido</span>
             </div>
             <div class="certificate-body">
               <div class="certificate-info">
-                <p><i class="fas fa-calendar-alt"></i> Concluído em: 15/05/2023</p>
+                <p><i class="fas fa-calendar-alt"></i> Concluido</p>
                 <p><i class="fas fa-clock"></i> Carga horária: 40 horas</p>
-                <p><i class="fas fa-percentage"></i> Desempenho: 92%</p>
+                <p><i class="fas fa-percentage"></i> Desempenho: 100%</p>
               </div>
               <div class="certificate-actions">
                 <button class="download-btn" onclick="downloadCertificate('matematica-basica')">
@@ -103,13 +128,13 @@
           <div class="certificate-card completed" data-course="portugues">
             <div class="certificate-header">
               <h3>Português Avançado</h3>
-              <span class="certificate-status completed">Concluído</span>
+              <span class="certificate-status completed">Concluido</span>
             </div>
             <div class="certificate-body">
               <div class="certificate-info">
-                <p><i class="fas fa-calendar-alt"></i> Concluído em: 22/06/2023</p>
+                <p><i class="fas fa-calendar-alt"></i> Concluido</p>
                 <p><i class="fas fa-clock"></i> Carga horária: 35 horas</p>
-                <p><i class="fas fa-percentage"></i> Desempenho: 88%</p>
+                <p><i class="fas fa-percentage"></i> Desempenho: 100%</p>
               </div>
               <div class="certificate-actions">
                 <button class="download-btn" onclick="downloadCertificate('portugues-avancado')">
@@ -126,16 +151,16 @@
           <div class="certificate-card progress" data-course="historia">
             <div class="certificate-header">
               <h3>História do Brasil</h3>
-              <span class="certificate-status progress">Em progresso (75%)</span>
+              <span class="certificate-status completed">Começar</span>
             </div>
             <div class="certificate-body">
               <div class="certificate-info">
-                <p><i class="fas fa-calendar-alt"></i> Iniciado em: 10/07/2023</p>
+                <p><i class="fas fa-calendar-alt"></i> Começar</p>
                 <p><i class="fas fa-clock"></i> Carga horária: 30 horas</p>
-                <p><i class="fas fa-percentage"></i> Progresso atual: 75%</p>
+                <p><i class="fas fa-percentage"></i> Progresso atual: 0%</p>
               </div>
               <div class="progress-bar-certificate">
-                <div class="progress-fill" style="width: 75%"></div>
+                <div class="progress-fill" style="width: 5%"></div>
               </div>
               <div class="certificate-actions">
                 <button class="continue-btn" onclick="continueCourse('historia-brasil')">
@@ -149,16 +174,16 @@
           <div class="certificate-card progress" data-course="biologia">
             <div class="certificate-header">
               <h3>Biologia Celular</h3>
-              <span class="certificate-status progress">Em progresso (45%)</span>
+              <span class="certificate-status completed">Começar</span>
             </div>
             <div class="certificate-body">
               <div class="certificate-info">
-                <p><i class="fas fa-calendar-alt"></i> Iniciado em: 05/08/2023</p>
+                <p><i class="fas fa-calendar-alt"></i> Status: Ainda não iniciado</p>
                 <p><i class="fas fa-clock"></i> Carga horária: 25 horas</p>
-                <p><i class="fas fa-percentage"></i> Progresso atual: 45%</p>
+                <p><i class="fas fa-percentage"></i> Progresso atual: 0%</p>
               </div>
               <div class="progress-bar-certificate">
-                <div class="progress-fill" style="width: 45%"></div>
+                <div class="progress-fill" style="width: 6%"></div>
               </div>
               <div class="certificate-actions">
                 <button class="continue-btn" onclick="continueCourse('biologia-celular')">
@@ -185,7 +210,7 @@
   <div id="shareModal" class="modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal()">&times;</span>
-      <h3>Compartilhar Certificado</h3>
+      <h3 class="title h3">Compartilhar certificado</h3>
       <div class="share-options">
         <button class="social-share facebook" onclick="shareOnSocial('facebook')">
           <i class="fab fa-facebook-f"></i> Facebook
@@ -204,16 +229,51 @@
         <label for="certificate-link">Link para compartilhar:</label>
         <div class="link-container">
           <input type="text" id="certificate-link" value="https://enemzada.com/certificado/123456" readonly>
-          <button class="copy-link" onclick="copyToClipboard()">
-            <i class="fas fa-copy"></i> Copiar
+           <button class="copy-link" onclick="copyLink()">Copiar</button>
           </button>
         </div>
       </div>
     </div>
   </div>
+
+   <script>
+      document.getElementById("notificationBtn").addEventListener("click", function () {
+  const badge = document.getElementById("notificationBadge");
+  const notificationContent = document.getElementById("notificationContent");
+
+
+  badge.style.display = "none";
+
+
+  notificationContent.innerHTML = "<p>Você não tem novas notificações</p>";
+
   
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "block";
+});
+
+
+document.getElementById("close-notifications").addEventListener("click", function () {
+  const notificationContainer = document.getElementById("notificationContainer");
+  notificationContainer.style.display = "none";
+});
+     </script>
+  
+
+      <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="../js/libras.js"></script>
   <script src="../js/certificados.js"></script>
+    <script src="../js/notificacoes.js"></script>
   <script src="https://kit.fontawesome.com/9185a0a212.js" crossorigin="anonymous"></script>
+  <script src="../js/acessibilidade.js"></script>
 </body>
 
 </html>
